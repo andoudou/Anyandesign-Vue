@@ -7,7 +7,7 @@
         </div>
         <div class="headlinecenter">
             <h1>OOPS!</h1>
-            <h2s>The page you request is still under construction</h2><br><br>
+            <h2s>The page you request is still under construction</h2s><br><br>
                 <a href="index.html">
                     <div id="homebutton">
                         <h5>BACK TO HOME</h5>
@@ -39,10 +39,31 @@ export default {
 }
 
 .headlinecenter {
+    position: absolute;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    top: 30vmin;
+    text-align: center;
     padding: 5% 0;
     background: rgba(255, 255, 255, 0.8);
-    top: 30vmin;
+}
+
+#photoinfo {
+    position: absolute;
+    bottom: 5vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    text-align: right;
+    color: #888;
+    opacity: 0.5;
+    font-style: italic;
+    z-index: 20;
 }
 
 .headlinecenter h2 {
