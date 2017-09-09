@@ -18,7 +18,7 @@
         <div class="party" id="part1"><img src="/static/images/projects/eco360/CJM.jpg" width="80%" /></div>
     </div>
     <catalogue>
-        <div slot="attachment" style="position: absolute; height: 100%; width: 100%; top: 0;">
+        <div slot="attachment">
             <Top></Top>
             <contact></contact>
         </div>
@@ -42,13 +42,6 @@ export default {
 }
 </script>
 <style scoped>
-.party {
-    position: relative;
-    width: 100%;
-    height: auto;
-    z-index: -10;
-}
-
 .headlineleft {
     position: relative;
     width: 80%;
@@ -60,6 +53,13 @@ export default {
     padding-bottom: 20vmin;
     text-align: left;
     transition: all 0.5s;
+}
+
+.party {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: -10;
 }
 
 #text {
@@ -89,5 +89,4 @@ export default {
 .content {
     text-align: center;
 }
-
 </style>

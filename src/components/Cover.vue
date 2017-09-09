@@ -69,19 +69,8 @@ export default {
     }
 
     .headline.scrolled {
-    top: 50vmin;
-    opacity: 0;
-    }
-
-    .headlinecenter {
-        position: absolute;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        right: 0;
-        left: 0;
-        top: 44vmin;
-        text-align: center;
+        top: 50vmin;
+        opacity: 0;
     }
 
     #photoinfo {

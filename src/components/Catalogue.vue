@@ -1,5 +1,5 @@
 <template>
-    <div class="cataloguebox">
+    <div class="cataloguebox" v-bind:style="{ backgroundColor: getBackgroundColorString() }">
         <div class="catalogue">
             <h3>CATALOGUE／目录</h3>
             <div class="table">
@@ -9,11 +9,11 @@
                         <ul>
                             <li class="tablehead">UX/IxD／体验与交互</li><br>
                             <li>——</li><br>
-                            <li><a href="#/portfolio/foodprint" target="_blank">Foodprint／碳从口出</a></li>
-                            <li><a href="#/portfolio/leyue" target="_blank">LE YUE／乐乐</a></li>
-                            <li><a href="#/portfolio/lightingroom" target="_blank">Lighting Room／试灯间</a></li>
-                            <li><a href="#/portfolio/performingwall" target="_blank">Performing Wall／动次打次</a></li>
-                            <li><a href="#/portfolio/pick" target="_blank">Pick／匹课</a></li>
+                            <li><a href="#/portfolio/foodprint">Foodprint／碳从口出</a></li>
+                            <li><a href="#/portfolio/leyue">LE YUE／乐乐</a></li>
+                            <li><a href="#/portfolio/lightingroom">Lighting Room／试灯间</a></li>
+                            <li><a href="#/portfolio/performingwall">Performing Wall／动次打次</a></li>
+                            <li><a href="#/portfolio/pick">Pick／匹课</a></li>
                         </ul>
                     </div>
                     <div class="queue">
@@ -21,9 +21,9 @@
                         <ul>
                             <li class="tablehead">INFOGRAPHIC／信息可视化</li><br>
                             <li>——</li><br>
-                            <li><a href="#/portfolio/toiletthings" target="_blank">Things in Toilet／厕所那些事</a></li>
-                            <li><a href="#/portfolio/movablefeasts" target="_blank">Moveable Feasts／流动的盛宴</a></li>
-                            <li><a href="#/portfolio/eco360" target="_blank">Eco360 CJM／Eco360用户旅程图</a></li>
+                            <li><a href="#/portfolio/toiletthings">Things in Toilet／厕所那些事</a></li>
+                            <li><a href="#/portfolio/moveablefeasts">Moveable Feasts／流动的盛宴</a></li>
+                            <li><a href="#/portfolio/eco360">Eco360 CJM／Eco360用户旅程图</a></li>
                         </ul>
                     </div>
                     <div class="queue">
@@ -31,9 +31,9 @@
                         <ul>
                             <li class="tablehead">INDUSTRIAL DESIGN／工业产品设计</li><br>
                             <li>——</li><br>
-                            <li><a href="#/oops" target="_blank">More Than One／不拘一格</a></li>
-                            <li><a href="#/oops" target="_blank">Meet Xi'an／西遇</a></li>
-                            <li><a href="#/oops" target="_blank">BEIREN／北人</a></li>
+                            <li><a href="#/oops">More Than One／不拘一格</a></li>
+                            <li><a href="#/oops">Meet Xi'an／西遇</a></li>
+                            <li><a href="#/oops">BEIREN／北人</a></li>
                         </ul>
                     </div>
                     <div class="queue">
@@ -41,10 +41,10 @@
                         <ul>
                             <li class="tablehead">OTHERS／其他</li><br>
                             <li>——</li><br>
-                            <li><a href="#/oops" target="_blank">Farm of Youth／知青农场</a></li>
-                            <li><a href="#/oops" target="_blank">Penguin Group Exhibition／企鹅展厅</a></li>
-                            <li><a href="#/portfolio/nightlightlamp" target="_blank">Nightlight Lamp／夜光灯</a></li>
-                            <li><a href="#/oops" target="_blank">Copperplate／铜板体书法</a></li>
+                            <li><a href="#/oops">Farm of Youth／知青农场</a></li>
+                            <li><a href="#/oops">Penguin Group Exhibition／企鹅展厅</a></li>
+                            <li><a href="#/portfolio/nightlightlamp">Nightlight Lamp／夜光灯</a></li>
+                            <li><a href="#/oops">Copperplate／铜板体书法</a></li>
                         </ul>
                     </div>
                 </h6>
@@ -55,7 +55,32 @@
 </template>
 <script>
 export default {
-  name: 'catalogue'
+  name: 'catalogue',
+  props: {
+      backgroundColor : {
+          type: String,
+          default: '#f8f8f8'
+      },
+      backgroundColorRGBA : {
+          type: Object,
+          default () {
+              return null;
+          }
+      }
+  },
+  methods: {
+      getBackgroundColorString : function () {
+          if (!!this.backgroundColorRGBA)
+          {
+              return 'rgba(' + this.backgroundColorRGBA.R + ','
+                         + this.backgroundColorRGBA.G + ','
+                         + this.backgroundColorRGBA.B + ','
+                         + this.backgroundColorRGBA.A + ')'
+          } else {
+              return this.backgroundColor
+          }
+      }
+  }
 }
 </script>
 <style scoped>

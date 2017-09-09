@@ -1,5 +1,5 @@
 <template>
-    <div id="navibar" v-bind:class="{scrolled: isScrolledFinally()}">
+    <div id="navibar" v-bind:class="{scrolled: isScrolledFinally(), dark: isDarkTheme}">
         <div id="bar">
             <a id="home" href="/">
                 <div id="logo"></div>
@@ -33,7 +33,7 @@
                                 <a href="oops.html" class="scroll_projects">
                                     <h6 class="underline">PORTFOLIO</h6>
                                 </a>
-                                <a href="portfolio/files/anyan_resume.pdf" target="_blank">
+                                <a href="/static/files/anyan_resume.pdf" target="_blank">
                                     <h6 class="underline">RESUME</h6>
                                 </a>
                             </div>
@@ -54,6 +54,10 @@ export default {
         },
         isPageScrolled: {
             type: Boolean
+        },
+        isDarkTheme: {
+            type: Boolean,
+            default: false
         }
     },
     data() {
@@ -213,5 +217,40 @@ export default {
     left: 0;
     width: 100%;
 }
+
+#navibar.scrolled.dark .underline,
+#navibar.scrolled.dark .underline a {
+    color: #000;
+}
+
+#navibar.dark .underline,
+#navibar.dark .underline a {
+    color: #fff;
+}
+
+#navibar.dark #logo {
+    background: url('/static/images/icon/logo3.svg') no-repeat center;
+}
+
+#navibar.dark .dropdown-content {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#navibar.scrolled.dark .dropdown-content {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#navibar.dark .underline:after {
+    background: #fff;
+}
+
+#navibar.scrolled.dark .underline:after {
+    background: #000;
+}
+
+#navibar.scrolled.dark #logo {
+    background: url('/static/images/icon/logo2.svg') no-repeat center;
+}
+
 </style>
 
