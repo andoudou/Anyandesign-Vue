@@ -18,7 +18,7 @@
         <div class="party" id="part1"><img src="/static/images/projects/toiletthings/toilet.jpg" width="100%" /></div>
     </div>
 
-    <catalogue v-bind:backgroundColor="'#ffffff'">
+    <catalogue v-bind:backgroundColorGradient="catalogueBackground">
         <div slot="attachment">
             <Top></Top>
             <contact></contact>
@@ -41,6 +41,15 @@ export default {
         Contact,
         Top
     },
+    data () {
+        return {
+            catalogueBackground: {
+                deg: 0,
+                from: '#F7E8EF',
+                to: '#fff'
+            }
+        }
+    }
 }
 </script>
 <style scoped>

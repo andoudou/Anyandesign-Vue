@@ -1,5 +1,5 @@
 <template>
-    <div class="cataloguebox" v-bind:style="{ backgroundColor: getBackgroundColorString() }">
+    <div class="cataloguebox" v-bind:style="{ background: getBackgroundColorString() }">
         <div class="catalogue">
             <h3>CATALOGUE</h3>
             <div class="table">
@@ -66,10 +66,22 @@ export default {
           default () {
               return null;
           }
+      },
+      backgroundColorGradient : {
+          type: Object,
+          default () {
+              return null;
+          }
       }
   },
   methods: {
       getBackgroundColorString : function () {
+          if (!!this.backgroundColorGradient)
+          {
+              return 'linear-gradient(' + this.backgroundColorGradient.deg + 'deg, ' 
+                                        + this.backgroundColorGradient.from + ',' 
+                                        + this.backgroundColorGradient.to + ')'
+          }
           if (!!this.backgroundColorRGBA)
           {
               return 'rgba(' + this.backgroundColorRGBA.R + ','
