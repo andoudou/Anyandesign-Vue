@@ -8,7 +8,7 @@
         <div class="headlinecenter">
             <h1>OOPS!</h1>
             <h2>The page you request is still under construction</h2><br><br>
-                <a href="index.html">
+                <a href="#/">
                     <div id="homebutton">
                         <h5>BACK TO HOME</h5>
                     </div>

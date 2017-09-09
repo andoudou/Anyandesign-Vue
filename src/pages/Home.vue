@@ -96,7 +96,7 @@
         <!--第三行-->
         <div class="row" id="row3">
             <div class="three columns">
-                <a href="oops.html">
+                <a href="#/oops">
                     <div class="picture" id="picture7">
                         <div class="text"><span>
 								<h3 class="eng_name">Meet Xi'an</h3>
