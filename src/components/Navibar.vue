@@ -13,7 +13,7 @@
                                 <a href="#/">
                                     <h6 class="underline">SELECTED</h6>
                                 </a>
-                                <a href="#all">
+                                <a href="#/all">
                                     <h6 class="underline">ALL</h6>
                                 </a>
                             </div>
@@ -21,7 +21,7 @@
                     </div>
 
                     <li class="underline">
-                        <a class="menu" href="#about">
+                        <a class="menu" href="#/about">
                             <h5>ABOUT</h5>
                         </a>
                     </li>
@@ -30,7 +30,7 @@
                         <li class="underline">
                             <h5 class="dropbtn">DOWNLOAD</h5>
                             <div class="dropdown-content">
-                                <a href="oops.html" class="scroll_projects">
+                                <a href="#/oops" class="scroll_projects">
                                     <h6 class="underline">PORTFOLIO</h6>
                                 </a>
                                 <a href="/static/files/anyan_resume.pdf" target="_blank">
