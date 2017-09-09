@@ -57,7 +57,7 @@ export default {
   },
 }
 </script>
-<<style scoped>
+<style scoped>
 .party {
     position: relative;
     width: 100%;

@@ -6,10 +6,18 @@ import All from '../pages/All.vue'
 import About from '../pages/About.vue'
 import Eco360 from '../pages/portfolio/Eco360.vue'
 import Foodprint from '../pages/portfolio/Foodprint.vue'
-import Leyue from '../pages/portfolio/Leyue.vue'
+import LeYue from '../pages/portfolio/LeYue.vue'
 import LightingRoom from '../pages/portfolio/LightingRoom.vue'
-import Moveablefeasts from '../pages/portfolio/Moveablefeasts.vue'
+import MoveableFeasts from '../pages/portfolio/MoveableFeasts.vue'
 import NightLightLamp from '../pages/portfolio/NightLightLamp.vue'
+import PerformingWall from '../pages/portfolio/PerformingWall.vue'
+import MoreThanOne from '../pages/portfolio/MoreThanOne.vue'
+import Pick from '../pages/portfolio/Pick.vue'
+import ToiletThings from '../pages/portfolio/ToiletThings.vue'
+
+
+
+
 
 Vue.use(Router)
 
@@ -41,8 +49,8 @@ export default new Router({
         },
         {
             path: '/portfolio/leyue',
-            name: 'Leyue',
-            component: Leyue
+            name: 'LeYue',
+            component: LeYue
         },
         {
             path: '/portfolio/lightingroom',
@@ -51,13 +59,33 @@ export default new Router({
         },
         {
             path: '/portfolio/moveablefeasts',
-            name: 'Moveablefeasts',
-            component: Moveablefeasts
+            name: 'MoveableFeasts',
+            component: MoveableFeasts
         },
         {
             path: '/portfolio/nightlightlamp',
             name: 'NightLightLamp',
             component: NightLightLamp
+        },
+        {
+            path: '/portfolio/performingwall',
+            name: 'PerformingWall',
+            component: PerformingWall
+        },
+        {
+            path: '/portfolio/morethanone',
+            name: 'MoreThanOne',
+            component: MoreThanOne
+        },
+        {
+            path: '/portfolio/pick',
+            name: 'Pick',
+            component: Pick
+        },
+        {
+            path: '/portfolio/toiletthings',
+            name: 'ToiletThings',
+            component: ToiletThings
         }
     ]
 })

@@ -63,7 +63,7 @@
                     </a>
                 </div>
                 <div class="proa" id="pro9">
-                    <a href="#/oops" target="_blank">
+                    <a href="#/portfolio/morethanone" target="_blank">
                         <img src="/static/images/projects/all/morethanone.jpg" width="100%" />
                         <div class="intro">
                             <div>

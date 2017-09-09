@@ -1,7 +1,7 @@
 <template>
     <div class="cataloguebox" v-bind:style="{ backgroundColor: getBackgroundColorString() }">
         <div class="catalogue">
-            <h3>CATALOGUE／目录</h3>
+            <h3>CATALOGUE</h3>
             <div class="table">
                 <h6>
                     <div class="queue">
@@ -31,7 +31,7 @@
                         <ul>
                             <li class="tablehead">INDUSTRIAL DESIGN／工业产品设计</li><br>
                             <li>——</li><br>
-                            <li><a href="#/oops">More Than One／不拘一格</a></li>
+                            <li><a href="#/portfolio/morethanone">More Than One／不拘一格</a></li>
                             <li><a href="#/oops">Meet Xi'an／西遇</a></li>
                             <li><a href="#/oops">BEIREN／北人</a></li>
                         </ul>
