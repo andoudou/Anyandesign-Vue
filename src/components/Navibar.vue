@@ -1,7 +1,7 @@
 <template>
     <div id="navibar" v-bind:class="{scrolled: isScrolledFinally(), dark: isDarkTheme}">
         <div id="bar">
-            <a id="home" href="/">
+            <a id="home" href="#/">
                 <div id="logo"></div>
             </a>
             <div id="menu">
