@@ -113,6 +113,7 @@ export default {
         -moz-background-size: cover;
         -webkit-background-size: cover;
         background-size: cover;
+        background-position: top;
         z-index: -1;
     }
 

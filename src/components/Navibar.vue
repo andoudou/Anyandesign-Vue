@@ -119,6 +119,8 @@ export default {
     left: 0;
     padding-top: 110px;
     transition: all 0.5s;
+    letter-spacing: 2px;
+    width: 80%;
 }
 
 #navibar.scrolled #bar {
