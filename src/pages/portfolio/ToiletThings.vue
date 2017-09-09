@@ -40,7 +40,6 @@ export default {
         Catalogue,
         Contact,
         Top
-<<<<<<< HEAD
     },
     data () {
         return {
@@ -50,8 +49,6 @@ export default {
                 to: '#fff'
             }
         }
-=======
->>>>>>> oops
     }
 }
 </script>
