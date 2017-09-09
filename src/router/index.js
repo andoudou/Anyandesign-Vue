@@ -4,6 +4,7 @@ import VueScrollTo from 'vue-scrollto'
 import Home from '../pages/Home.vue'
 import All from '../pages/All.vue'
 import About from '../pages/About.vue'
+import Oops from '../pages/Oops.vue'
 import Eco360 from '../pages/portfolio/Eco360.vue'
 import Foodprint from '../pages/portfolio/Foodprint.vue'
 import LeYue from '../pages/portfolio/LeYue.vue'
@@ -36,6 +37,11 @@ export default new Router({
             path: '/about',
             name: 'About',
             component: About
+        },
+        {
+            path: '/oops',
+            name: 'Oops',
+            component: Oops
         },
         {
             path: '/portfolio/eco360',

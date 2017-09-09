@@ -38,7 +38,7 @@ export default {
     Catalogue,
     Contact,
     Top
-  },
+  }
 }
 </script>
 <style scoped>

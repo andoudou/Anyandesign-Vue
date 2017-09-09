@@ -41,7 +41,7 @@ export default {
         Catalogue,
         Contact,
         Top
-    },
+    }
 }
 </script>
 
