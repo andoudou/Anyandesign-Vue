@@ -1,0 +1,152 @@
+<template>
+  <div id="contact">
+    <div id="sayhi">
+        <ul id="connect">
+            <li>
+                <a href="mailto:andoudou92@icloud.com" class="connect">
+                    <div id="connect1"></div>
+                </a>
+            </li>&nbsp; &nbsp; &nbsp;
+            <li>
+                <div class="tooltip connect" id="connect2">
+                    <span class="tooltiptext"></span>
+                </div>
+            </li>&nbsp; &nbsp; &nbsp;
+            <li>
+                <a href="https://www.linkedin.com/in/yan-an/" target="_blank" class="connect">
+                    <div id="connect3"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="rights"><a style="cursor: text">© AnYan {{ year }}</a></div>
+  </div>
+</template>
+<script>
+export default {
+  name: "contact",
+  computed: {
+      year: function() {
+        return new Date().getFullYear()
+      }
+  }
+}
+</script>
+<style scoped>
+#sayhi {
+    position: absolute;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    bottom: calc(4 * (1vw + 1vh - 1vmin));
+    font-size: 14px;
+    text-align: center;
+}
+
+#connect {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+#connect li {
+    display: inline-block;
+}
+
+#connect1 {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con1.svg') no-repeat 0 0;
+    background-size: 124px 30px;
+    transition: all .2s;
+}
+
+#connect1:hover {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con2.svg') no-repeat 0 0;
+    background-size: 124px 30px;
+}
+
+#connect2 {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con1.svg') no-repeat 50% 0;
+    background-size: 124px 30px;
+    transition: all .2s;
+}
+
+#connect2:hover {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con2.svg') no-repeat 50% 0;
+    background-size: 124px 30px;
+}
+
+#connect3 {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con1.svg') no-repeat 100% 0;
+    background-size: 124px 30px;
+    transition: all .2s;
+}
+
+#connect3:hover {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con2.svg') no-repeat 100% 0;
+    background-size: 124px 30px;
+}
+
+#rights {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    bottom: calc(1 * (1vw + 1vh - 1vmin));
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0;
+    font-weight: 100;
+}
+
+.tooltip {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con1.svg') no-repeat 50% 0;
+    background-size: 124px 30px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    height: 140px;
+    background: url('/static/images/wechat.png') no-repeat center;
+    background-size: cover;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -70px;
+    z-index: 100;
+    opacity: 0;
+    transition: .5s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+</style>
