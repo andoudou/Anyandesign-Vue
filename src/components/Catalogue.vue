@@ -177,6 +177,8 @@ a {
 
 .queue:hover div {
     transform: scale(1.3, 1.3);
+    -moz-transform: scale(1.3, 1.3);
+    -webkit-transform: scale(1.3, 1.3);
     transition: .5s;
 }
 

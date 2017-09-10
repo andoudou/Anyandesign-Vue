@@ -66,6 +66,10 @@ p {
     letter-spacing: 1px;
 }
 
+ul {
+    list-style: none;
+}
+
 .component-fade-enter-active {
   transition: all .3s ease;
 }
@@ -75,6 +79,8 @@ p {
 .component-fade-enter, .component-fade-leave-to
 /* .slide-fade-leave-active for below version 2.1.8 */ {
   transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -webkit-transform: translateY(10px);
   opacity: 0;
 }
 </style>

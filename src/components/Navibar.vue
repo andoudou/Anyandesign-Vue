@@ -41,6 +41,36 @@
                     </div>
                 </ul>
             </div>
+            <div id="hamburger" v-on:click="showPopup = true">
+            </div>
+            <transition name="popup" v-on:after-enter="afterMenuEnter">
+                <div id="popupmenu" v-if="showPopup">
+                    <ul>
+                        <transition-group name="list" 
+                            v-on:before-enter="beforeListEnter"
+                            v-on:enter="listEnter"
+                            v-on:before-leave="beforeListLeave"
+                            v-on:leave="listLeave"
+                            v-on:after-leave="afterListLeave">
+                            <li v-if="showList" key="0" v-bind:data-index="0">
+                                <a v-on:click="navigateTo('/')">HOME</a>
+                            </li>
+                            <li v-if="showList" key="1" v-bind:data-index="1">
+                                <a v-on:click="navigateTo('/all')">ALL WORKS</a>
+                            </li>
+                            <li v-if="showList" key="2" v-bind:data-index="2">
+                                <a v-on:click="navigateTo('/about')">ABOUT</a>
+                            </li>
+                            <li v-if="showList" key="3" v-bind:data-index="3">
+                                <a href="/static/files/anyan_resume.pdf">RESUME</a>
+                            </li>
+                            <li v-if="showList" key="4" v-bind:data-index="4">
+                                <div id="goback" v-on:click="showList = false"></div>
+                            </li>
+                        </transition-group>
+                    </ul>
+                </div>
+            </transition>
         </div>
     </div>
 </template>
@@ -62,7 +92,10 @@ export default {
     },
     data() {
         return {
-            isScrolled: window.scrollY > 0.1 * window.innerHeight
+            isScrolled: window.scrollY > 0.1 * window.innerHeight,
+            showPopup: false,
+            showList: false,
+            navigate: ''
         }
     },
     methods: {
@@ -75,6 +108,76 @@ export default {
             } else {
                 this.isScrolled = false
             }
+        },
+        navigateTo: function(path) {
+            this.navigate = path
+            this.showList = false
+        },
+        afterMenuEnter: function(el) {
+            this.showList = true
+        },
+        beforeListEnter: function(el) {
+            el.style.opacity = 0
+            el.style.transform = this.setTransformX(el, 60)
+        },
+        listEnter: function(el, done) {
+            var delay = el.dataset.index * 120
+            var vm = this;
+
+            setTimeout(function(){
+                var currentX = 60;
+                var id = setInterval(frame, 75);
+                function frame(){
+                    if(currentX <= 0) {
+                        clearInterval(id)
+                        done()
+                    } else {
+                        currentX -= 6
+                        el.style.opacity = Number(el.style.opacity) + 0.1
+                        vm.setTransformX(el, currentX)
+                    }
+                }
+            }, delay)
+        },
+        beforeListLeave: function(el) {
+            el.style.opacity = 1
+        },
+        listLeave: function(el, done) {
+            var delay = el.dataset.index * 120
+            var vm = this;
+
+            setTimeout(function(){
+                var currentX = 0;
+                var id = setInterval(frame, 75);
+                function frame(){
+                    if(currentX >= 60) {
+                        clearInterval(id)
+                        done()
+                    } else {
+                        currentX += 6
+                        el.style.opacity = Number(el.style.opacity) - 0.20
+                        vm.setTransformX(el, currentX)
+                    }
+                }
+            }, delay)
+        },
+        afterListLeave: function(el) {
+            if(!!this.navigate && this.$route.path !== this.navigate) {
+                this.$router.push(this.navigate)
+                this.navigate = ''
+            } else {
+                this.showPopup = false
+            }
+        },
+        setTransformX: function (element, deltaX) {
+            var transfromString = ("translateX(" + deltaX + "px )");
+
+            // now attach that variable to each prefixed style
+            element.style.webkitTransform = transfromString;
+            element.style.MozTransform = transfromString;
+            element.style.msTransform = transfromString;
+            element.style.OTransform = transfromString;
+            element.style.transform = transfromString;
         }
     },
     created() {
@@ -124,7 +227,6 @@ export default {
 }
 
 #navibar.scrolled #bar {
-    height: 48px;
     padding-top: 0;
     letter-spacing: 1px;
     width: 96%;
@@ -141,6 +243,12 @@ export default {
 
 #logo:hover {
     transform: scale(1.3) rotate(-25deg);
+    -moz-transform: scale(1.3) rotate(-25deg);
+    -webkit-transform: scale(1.3) rotate(-25deg);
+}
+
+#navibar.dark #logo {
+    background: url('/static/images/icon/logo3.svg') no-repeat center;
 }
 
 #navibar.scrolled #logo {
@@ -148,29 +256,35 @@ export default {
     background-size: 100%;
 }
 
+#navibar.scrolled.dark #logo {
+    background: url('/static/images/icon/logo2.svg') no-repeat center;
+}
+
+/* full screen menu */
+
 #menu {
     position: absolute;
     right: 0;
 }
 
-#bar ul {
+#menu ul {
     list-style: none;
     padding-top: 14px;
     height: 48px;
 }
 
-#bar li {
+#menu li {
     display: inline-block;
     text-decoration: none;
     margin: 0 0 0 40px;
 }
 
-.dropdown {
+#menu .dropdown {
     position: relative;
     display: inline-block;
 }
 
-.dropdown-content {
+#menu .dropdown-content {
     display: none;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.1);
@@ -179,32 +293,32 @@ export default {
     overflow: auto;
 }
 
-.dropdown-content a {
+#menu .dropdown-content a {
     color: #000;
     margin: 15px 30px 15px 10px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown:hover .dropdown-content {
+#menu .dropdown:hover .dropdown-content {
     display: block;
 }
 
-.dropdown:hover .dropbtn {
+#menu .dropdown:hover .dropbtn {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.dropbtn {
+#menu .dropbtn {
     cursor: pointer;
 }
 
-.underline {
+#menu .underline {
     width: auto;
     height: auto;
     position: relative;
 }
 
-.underline:after {
+#menu .underline:after {
     content: "";
     width: 0;
     height: 1.5px;
@@ -215,43 +329,146 @@ export default {
     transition: all .5s;
 }
 
-.underline:hover:after {
+#menu .underline:hover:after {
     left: 0;
     width: 100%;
 }
 
-#navibar.scrolled.dark .underline,
-#navibar.scrolled.dark .underline a {
+#navibar.scrolled.dark #menu .underline,
+#navibar.scrolled.dark #menu .underline a {
     color: #000;
 }
 
-#navibar.dark .underline,
-#navibar.dark .underline a {
+#navibar.dark #menu .underline,
+#navibar.dark #menu .underline a {
     color: #fff;
 }
 
-#navibar.dark #logo {
-    background: url('/static/images/icon/logo3.svg') no-repeat center;
-}
-
-#navibar.dark .dropdown-content {
+#navibar.dark #menu .dropdown-content {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-#navibar.scrolled.dark .dropdown-content {
+#navibar.scrolled.dark #menu .dropdown-content {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-#navibar.dark .underline:after {
+#navibar.dark #menu .underline:after {
     background: #fff;
 }
 
-#navibar.scrolled.dark .underline:after {
+#navibar.scrolled.dark #menu .underline:after {
     background: #000;
 }
+/* end of full screen menu */
 
-#navibar.scrolled.dark #logo {
-    background: url('/static/images/icon/logo2.svg') no-repeat center;
+/* mobile screen menu */
+#hamburger {
+    background: url('/static/images/icon/burger1.svg') no-repeat center;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+}
+
+#navibar.dark #hamburger {
+    background: url('/static/images/icon/burger2.svg') no-repeat center;
+}
+
+#navibar.scrolled #hamburger {
+    top: 22px;
+}
+
+#popupmenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+#popupmenu ul {
+    position: relative;
+    text-align: center;
+    font-size: 32pt;
+    line-height: 5em;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+#goback {
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: url('/static/images/icon/goback.svg') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.popup-enter-active {
+  transition: all .3s ease;
+}
+.popup-leave-active {
+  transition: all .6s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.popup-enter, .popup-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  opacity: 0;
+}
+
+/* end of mobile screen menu */
+
+@media (max-device-width: 1024px) {
+    #menu {
+        display: none;
+    }
+
+    #hamburger {
+        display: inline-block;
+    }
+
+    #logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    #navibar.scrolled #logo {
+        top: 10px;
+    }
+
+    #navibar.scrolled {
+        height: 100px;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+
+    }
+}
+
+@media (min-device-width: 1025px) {
+    #menu {
+        display: inline-block;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #logo {
+        width: 28px;
+        height: 28px;
+    }
+
+    #navibar.scrolled {
+        height: 48px;
+    }
 }
 
 </style>
