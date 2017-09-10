@@ -22,17 +22,23 @@
 
         <!--第一行-->
         <div class="row" id="row1">
-            <div class="three columns">
-                <router-link v-bind:to="'/portfolio/foodprint'">
-                    <div class="picture" id="picture1">
-                        <div class="text"><span>
-								<h3 class="eng_name">Foodprint</h3>
-								<h6 class="work_class">UI/Ixd</h6>
-								<h6 class="ch_name">「碳从口出」个人饮食碳排放管理</h6>
-						</span></div>
-                    </div>
-                </router-link>
-            </div>
+            <transition v-on:leave="leavePage"
+            v-on:before-leave="beforeLeavePage"
+            v-on:after-enter="afterEnterPage"
+            mode="out-in">
+                <div class="three columns" v-if="itemVisible('/portfolio/foodprint')" key="b">
+                    <a href="javascript:void(0)" v-on:click="itemClicked('/portfolio/foodprint')">
+                        <div class="picture" id="picture1">
+                            <div class="text"><span>
+                                    <h3 class="eng_name">Foodprint</h3>
+                                    <h6 class="work_class">UI/Ixd</h6>
+                                    <h6 class="ch_name">「碳从口出」个人饮食碳排放管理</h6>
+                            </span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="three columns" style="height: 1px;" v-else key="a"></div>
+            </transition>
             <div class="three columns">
                 <div class="picture" id="picture2">
                     <div class="text"><span>
@@ -145,6 +151,7 @@ export default {
           currentChange: 0,
           fadeInDuration: 2000,
           fadeOutDuration: 0,
+          currentClickedItem: ""
       }
   },
   mounted () {
@@ -203,6 +210,50 @@ export default {
                 el.style.opacity = Number(el.style.opacity) - 0.1;
             }
         }
+    },
+    itemClicked: function (name){
+        this.currentClickedItem = name;
+    },
+    itemVisible: function (name){
+        return this.currentClickedItem != name
+    },
+    beforeLeavePage: function(el) {
+        el.style.zIndex = 1000
+        el.style.opacity = 1
+    },
+    leavePage: function (el, done) {
+        console.log("leave")
+        console.log(el.style.opacity)
+        var vm = this;
+        var currentSca = 1;
+        var id = setInterval(frame, 100);
+        function frame(){
+            if(currentSca >= 10) {
+                clearInterval(id)
+                console.log("done still")
+                done()
+            } else {
+                currentSca += 0.5
+                el.style.opacity = Number(el.style.opacity) - 0.05;
+                vm.setTransform(el, {rot: 0, sca: currentSca, skx: 0, sky: 0})
+            }
+        }
+    },
+    afterEnterPage: function (el){
+        console.log("after enter")
+        this.$router.push(this.currentClickedItem)
+    },
+    setTransform: function (element, elTransformArg) {
+        var transfromString = ("rotate(" + elTransformArg.rot + "deg ) scale("
+            + elTransformArg.sca + ") skewX(" + elTransformArg.skx + "deg ) skewY("
+            + elTransformArg.sky + "deg )");
+
+        // now attach that variable to each prefixed style
+        element.style.webkitTransform = transfromString;
+        element.style.MozTransform = transfromString;
+        element.style.msTransform = transfromString;
+        element.style.OTransform = transfromString;
+        element.style.transform = transfromString;
     }
   }
 }
@@ -530,6 +581,7 @@ a {
         margin-left: 0;
         padding-bottom: 0;
         height: auto;
+        position: relative;
     }
     .column:first-child,
     .columns:first-child {
