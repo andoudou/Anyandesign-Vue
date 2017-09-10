@@ -16,13 +16,9 @@ import MoreThanOne from '../pages/portfolio/MoreThanOne.vue'
 import Pick from '../pages/portfolio/Pick.vue'
 import ToiletThings from '../pages/portfolio/ToiletThings.vue'
 
-
-
-
-
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
     routes: [{
             path: '/',
             name: 'Home',
@@ -93,7 +89,14 @@ export default new Router({
             name: 'ToiletThings',
             component: ToiletThings
         }
-    ]
+    ],
 })
+
+router.beforeEach(function(to, from, next) {
+    window.scrollTo(0, 0)
+    next();
+})
+
+export default router
 
 Vue.use(VueScrollTo)
