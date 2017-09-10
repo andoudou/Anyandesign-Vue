@@ -83,7 +83,7 @@ export default {
         left: 0;
         text-align: right;
         color: #888;
-        opacity: 0.5;
+        opacity: 1;
         font-style: italic;
         z-index: 20;
     }

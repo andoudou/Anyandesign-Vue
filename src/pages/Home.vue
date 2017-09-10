@@ -12,7 +12,7 @@
                 </transition>
             </div>
         </div>
-        <span slot="photoinfoContent">Rijks, Amsterdam Sept. 2016</span>
+        <span id="photoinfoContent" slot="photoinfoContent">Rijks, Amsterdam Sept. 2016</span>
     </cover>
     <div class="container page" id="pageContent">
         <div id="describ">
@@ -241,6 +241,10 @@ export default {
     height: auto;
 }
 
+#photoinfoContent {
+    opacity: 0.5;
+}
+
 #describ h4 {
     position: relative;
     margin-left: auto;
@@ -256,106 +260,6 @@ export default {
     transition: .2s;
     color: #aaa;
 }
-
-/* catalogou */
-
-.catalogue {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    right: 0;
-    left: 0;
-    padding: 15vh 0;
-    text-align: center;
-}
-
-.catalogue h3 {
-    padding-bottom: calc(6 * (1vw + 1vh - 1vmin));
-}
-
-.table {
-    width: 100%;
-}
-
-.table ul {
-    list-style-type: none;
-}
-
-.queue {
-    width: 24%;
-    height: 150px;
-    display: inline-table;
-}
-
-.queue a:hover {
-    color: #aaa;
-    /*color: #FF009D;*/
-    transition: .2s;
-}
-
-.table li,
-a {
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-.catalogueicon {
-    width: 80px;
-    height: 80px;
-    margin-left: auto;
-    margin-right: auto;
-    right: 0;
-    left: 0;
-    margin-bottom: 40px;
-    transition: all .2s;
-}
-
-#catalogueicon1 {
-    background: url('/static/images/icon/catalogue1.svg') no-repeat 0 0;
-    background-size: cover;
-}
-
-#catalogueicon2 {
-    background: url('/static/images/icon/catalogue1.svg') no-repeat 33.3% 0;
-    background-size: cover;
-}
-
-#catalogueicon3 {
-    background: url('/static/images/icon/catalogue1.svg') no-repeat 66.666667% 0;
-    background-size: cover;
-}
-
-#catalogueicon4 {
-    background: url('/static/images/icon/catalogue1.svg') no-repeat 100%;
-    background-size: cover;
-}
-
-.queue:hover div {
-    transform: scale(1.3, 1.3);
-    transition: .5s;
-}
-
-.queue:hover #catalogueicon1 {
-    background: url('/static/images/icon/catalogue2.svg') no-repeat 0 0;
-    background-size: cover;
-}
-
-.queue:hover #catalogueicon2 {
-    background: url('/static/images/icon/catalogue2.svg') no-repeat 33.3% 0;
-    background-size: cover;
-}
-
-.queue:hover #catalogueicon3 {
-    background: url('/static/images/icon/catalogue2.svg') no-repeat 66.666667% 0;
-    background-size: cover;
-}
-
-.queue:hover #catalogueicon4 {
-    background: url('/static/images/icon/catalogue2.svg') no-repeat 100%;
-    background-size: cover;
-}
-
-/* end foot */
 
 .container {
     position: relative;

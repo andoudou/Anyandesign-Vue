@@ -4,7 +4,7 @@
         <div slot="headlineContent">
             <h1>Here We Go</h1>
         </div>
-        <span slot="photoinfoContent">Rijks, Amsterdam Sept. 2016</span>
+        <span id="photoinfoContent" slot="photoinfoContent">Rijks, Amsterdam Sept. 2016</span>
     </cover>
     <div class="container page" id="pageContent">
         <!--<div id="describ">
@@ -229,6 +229,10 @@ export default {
 }
 </script>
 <style scoped>
+#photoinfoContent {
+    opacity: 0.5;
+}
+
 .container {
     background: #fff;
     position: relative;

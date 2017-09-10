@@ -6,7 +6,7 @@
             <span id="quote">L’étude du beau est un duel où <br>l’artiste crie de frayeur avant d’être vaincu.</span><br>对美的研究不过一场殊死决斗，<br>在注定被击败的结局之前，只不过看谁的哀鸣声更为响彻。”<br>- Charles Pierre Baudelaire 波德莱尔 -
           </h5>
         </div>
-        <span slot="photoinfoContent" style="color: #000;">Dongji Island, Zhoushan／东极岛，舟山市 Oct. 2015 @Miao</span>
+        <span id="photoinfoContent" slot="photoinfoContent">Dongji Island, Zhoushan／东极岛，舟山市 Oct. 2015 @Miao</span>
     </cover>
     <div class="container page" id="goingto">
         <div id="fullpage">
@@ -158,6 +158,10 @@ export default {
     clear: both;
 }
 
+#photoinfoContent {
+    color: #000;
+}
+
 .container {
     background: #fff;
     position: relative;
@@ -165,6 +169,7 @@ export default {
     height: auto;
     z-index: 50;
 }
+
 #describ {
     background: #fff;
     margin-left: auto;
@@ -479,8 +484,5 @@ export default {
 <style>
 #banner.about {
     background-image: url('/static/images/about/yan.jpg');
-}
-#photoinfo {
-  opacity: 1!important;
 }
 </style>
