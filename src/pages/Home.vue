@@ -150,6 +150,9 @@ export default {
   mounted () {
       this.currentChange = 1
   },
+  created () {
+      window.scrollTo(0, 0)
+  },
   computed: {
       changedMessage: function() {
           switch (this.currentChange) {

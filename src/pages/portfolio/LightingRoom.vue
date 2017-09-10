@@ -48,13 +48,16 @@ import Contact from '../../components/Contact.vue'
 import Top from '../../components/Top.vue'
 
 export default {
-  name: "lightingroom",
-  components: {
-    Navibar,
-    Catalogue,
-    Contact,
-    Top
-  }
+    name: "lightingroom",
+    components: {
+        Navibar,
+        Catalogue,
+        Contact,
+        Top
+    },
+    created () {
+        window.scrollTo(0, 0)
+    }
 }
 </script>
 <style scoped>

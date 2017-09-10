@@ -222,6 +222,9 @@ export default {
     Contact,
     Top,
     Catalogue
+  },
+  created () {
+      window.scrollTo(0, 0)
   }
 }
 </script>

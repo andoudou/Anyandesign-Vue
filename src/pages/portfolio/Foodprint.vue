@@ -34,13 +34,16 @@ import Contact from '../../components/Contact.vue'
 import Top from '../../components/Top.vue'
 
 export default {
-  name: "foodprint",
-  components: {
-    Navibar,
-    Catalogue,
-    Contact,
-    Top
-  }
+    name: "foodprint",
+    components: {
+        Navibar,
+        Catalogue,
+        Contact,
+        Top
+    },
+    created () {
+        window.scrollTo(0, 0)
+    }
 }
 </script>
 <style scoped>
