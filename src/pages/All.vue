@@ -15,7 +15,7 @@
         <div id="list" class="row">
             <div id="ca">
                 <div class="proa" id="pro1">
-                    <a href="#/portfolio/lightingroom" target="_blank">
+                    <router-link v-bind:to="'/portfolio/lightingroom'" target="_blank">
                         <img src="/static/images/projects/all/lightingroom.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -24,10 +24,10 @@
                             <h6>Philips online shopping experience design focuse on step of comparing different products in the whole process of choosing and buying lamps.</h6>
                             <h5 class="time">User Experience/ Interaction Design 11. 2016</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="proa" id="pro3">
-                    <a href="#/portfolio/foodprint" target="_blank">
+                    <router-link v-bind:to="'/portfolio/foodprint'" target="_blank">
                         <img src="/static/images/projects/all/foodprint.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -36,10 +36,10 @@
                             <h6>Childhood memory of blue sky has faded away with growing fog and haze, but we still hope to find the way back by carben footprint.</h6>
                             <h5 class="time">User Interface／Interaction Design 01. 2017</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="proa" id="pro5">
-                    <a href="#/portfolio/pick" target="_blank">
+                    <router-link v-bind:to="'/portfolio/pick'" target="_blank">
                         <img src="/static/images/projects/all/pick.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -48,10 +48,10 @@
                             <h6>4M3.COM选课网的改进设计能够主动为同学们精选课程，让选课流程更加顺畅； 合理进行分流，避免每次开学前的选课网“大拥堵”，让每位同学都能够选到心仪的课程。</h6>
                             <h5 class="time">User Interface／Interaction Design/ User Experience 10. 2015</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="proa" id="pro7">
-                    <a href="#/portfolio/eco360" target="_blank">
+                    <router-link v-bind:to="'/portfolio/eco360'" target="_blank">
                         <img src="/static/images/projects/all/eco360.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -60,10 +60,10 @@
                             <h6>Eco360 customer journey map illustrates the process of a person or an organization from being aware of Azure to becoming a billable customer. </h6>
                             <h5 class="time">Infographic 07. 2017</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="proa" id="pro9">
-                    <a href="#/portfolio/morethanone" target="_blank">
+                    <router-link v-bind:to="'/portfolio/morethanone'" target="_blank">
                         <img src="/static/images/projects/all/morethanone.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -72,10 +72,10 @@
                             <h6></h6>
                             <h5 class="time">Industrial Design/ User Research 04. 2014</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="proa" id="pro11">
-                    <a href="#/oops" target="_blank">
+                    <router-link v-bind:to="'/oops'" target="_blank">
                         <img src="/static/images/projects/all/meetxi'an.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -84,10 +84,10 @@
                             <h6></h6>
                             <h5 class="time">ndustrial Design 04. 2015</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="proa" id="pro13">
-                    <a href="#/oops" target="_blank">
+                    <router-link v-bind:to="'/oops'" target="_blank">
                         <img src="/static/images/projects/all/penguinbooks.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -96,10 +96,10 @@
                             <h6></h6>
                             <h5 class="time">Exhibition Design 04. 2014</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="proa" id="pro15">
-                    <a href="#/oops" target="_blank">
+                    <router-link v-bind:to="'/oops'" target="_blank">
                         <img src="/static/images/projects/all/copperplate.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -108,12 +108,12 @@
                             <h6></h6>
                             <h5 class="time">Calligraphy, Personal hobby</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
             </div>
             <div id="cb">
                 <div class="prob" id="pro2">
-                    <a href="#/portfolio/leyue" target="_blank">
+                    <router-link v-bind:to="'/portfolio/leyue'" target="_blank">
                         <img src="/static/images/projects/all/leyue.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -122,10 +122,10 @@
                             <h6>Hypertension is a long term medical condition which is a major risk factor for cardiovascular disease. Insisting on measuring blood pressure and taking medicine could reduce the incidence of cardiovascular disease.</h6>
                             <h5 class="time">User Experience/ Interaction Design/ User Interface 05. 2016</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="prob" id="pro4">
-                    <a href="#/portfolio/performingwall" target="_blank">
+                    <router-link v-bind:to="'/portfolio/performingwall'" target="_blank">
                         <img src="/static/images/projects/all/performingwall.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -134,10 +134,10 @@
                             <h6>Future-oriented Interactive Device</h6>
                             <h5 class="time">User Experience/ Interaction Design 12. 2015</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="prob" id="pro6">
-                    <a href="#/portfolio/toiletthings" target="_blank">
+                    <router-link v-bind:to="'/portfolio/toiletthings'" target="_blank">
                         <img src="/static/images/projects/all/toiletthings.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -147,10 +147,10 @@
                                 there are also some objective reasons.</h6>
                             <h5 class="time">Data Visualization 05. 2016</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="prob" id="pro8">
-                    <a href="#/portfolio/moveablefeasts" target="_blank">
+                    <router-link v-bind:to="'/portfolio/moveablefeasts'" target="_blank">
                         <img src="/static/images/projects/all/moveablefeasts.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -160,10 +160,10 @@
                                 and stalls throughout the city.</h6>
                             <h5 class="time">Infographic 03. 2016</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="prob" id="pro10">
-                    <a href="#/oops" target="_blank">
+                    <router-link v-bind:to="'/oops'" target="_blank">
                         <img src="/static/images/projects/all/beiren.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -172,10 +172,10 @@
                             <h6></h6>
                             <h5 class="time">Industrial Design 05. 2014</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="prob" id="pro12">
-                    <a href="#/oops" target="_blank">
+                    <router-link v-bind:to="'/oops'" target="_blank">
                         <img src="/static/images/projects/all/youthfarm.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -184,10 +184,10 @@
                             <h6></h6>
                             <h5 class="time">Packaging/ Branding 07. 2014</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="prob" id="pro14">
-                    <a href="#/portfolio/nightlightlamp" target="_blank">
+                    <router-link v-bind:to="'/portfolio/nightlightlamp'" target="_blank">
                         <img src="/static/images/projects/all/nightlightlamp.jpg" width="100%" />
                         <div class="intro">
                             <div>
@@ -196,7 +196,7 @@
                             <h6></h6>
                             <h5 class="time">Craft 11. 2014</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>

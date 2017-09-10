@@ -23,7 +23,7 @@
         <!--第一行-->
         <div class="row" id="row1">
             <div class="three columns">
-                <a href="#/portfolio/foodprint">
+                <router-link v-bind:to="'/portfolio/foodprint'">
                     <div class="picture" id="picture1">
                         <div class="text"><span>
 								<h3 class="eng_name">Foodprint</h3>
@@ -31,21 +31,16 @@
 								<h6 class="ch_name">「碳从口出」个人饮食碳排放管理</h6>
 						</span></div>
                     </div>
-                </a>
+                </router-link>
             </div>
             <div class="three columns">
-                <!--<a href="portfolio/leyue.html">-->
                 <div class="picture" id="picture2">
                     <div class="text"><span>
-                                <!--<p class="eng_name">Learning</p>
-								<p class="work_class">CLASS</p>
-								<p class="ch_name">作品名称</p>-->
 						</span></div>
                 </div>
-                <!--</a>-->
             </div>
             <div class="six columns">
-                <a href="#/portfolio/performingwall">
+                <router-link v-bind:to="'/portfolio/performingwall'">
                     <div class="picture" id="picture3">
                         <div class="text"><span>
 								<h3 class="eng_name">Performing Wall</h3>
@@ -53,24 +48,19 @@
 								<h6 class="ch_name">「动次打次」面向未来办公情景的交互设计</h6>
 						</span></div>
                     </div>
-                </a>
+                </router-link>
             </div>
         </div>
         <!--第二行-->
         <div class="row" id="row2">
             <div class="three columns">
-                <!--<a href="portfolio/leyue.html">-->
                 <div class="picture" id="picture4">
                     <div class="text"><span>
-                            <!--<p class="eng_name">Thinking</p>
-                            <p class="work_class">CLASS</p>
-                            <p class="ch_name">作品名称</p>-->
 						</span></div>
                 </div>
-                <!--</a>-->
             </div>
             <div class="six columns">
-                <a href="#/portfolio/lightingroom">
+                <router-link v-bind:to="'/portfolio/lightingroom'">
                     <div class="picture" id="picture5">
                         <div class="text"><span>
                             <h3 class="eng_name">Lighting Room</h3>
@@ -78,10 +68,10 @@
                             <h6 class="ch_name">试灯间</h6>
 						</span></div>
                     </div>
-                </a>
+                </router-link>
             </div>
             <div class="three columns">
-                <a href="#/portfolio/leyue">
+                <router-link v-bind:to="'/portfolio/leyue'">
                     <div class="picture" id="picture6">
                         <div class="text"><span>
                             <h3 class="eng_name">LE YUE</h3>
@@ -89,14 +79,14 @@
                             <h6 class="ch_name">「乐乐」心脑血管疾病恢复与管理系统</h6>
 						</span></div>
                     </div>
-                </a>
+                </router-link>
             </div>
         </div>
 
         <!--第三行-->
         <div class="row" id="row3">
             <div class="three columns">
-                <a href="#/oops">
+                <router-link v-bind:to="'/oops'">
                     <div class="picture" id="picture7">
                         <div class="text"><span>
 								<h3 class="eng_name">Meet Xi'an</h3>
@@ -104,21 +94,16 @@
 								<h6 class="ch_name">「西遇」单车</h6>
 						</span></div>
                     </div>
-                </a>
+                </router-link>
             </div>
             <div class="three columns">
-                <!--<a href="portfolio/leyue.html">-->
                 <div class="picture" id="picture8">
                     <div class="text"><span>
-                                <!--<p class="eng_name">Practice</p>
-								<p class="work_class">CLASS</p>
-								<p class="ch_name">作品名称</p>-->
 						</span></div>
                 </div>
-                <!--</a>-->
             </div>
             <div class="six columns">
-                <a href="#/portfolio/morethanone">
+                <router-link v-bind:to="'/portfolio/morethanone'">
                     <div class="picture" id="picture9">
                         <div class="text"><span>
 								<h3 class="eng_name">More Than One</h3>
@@ -126,13 +111,13 @@
 								<h6 class="ch_name">「不拘一格」学生家具</h6>
 							</span></div>
                     </div>
-                </a>
+                </router-link>
             </div>
         </div>
         <div id="describ">
-            <a href="#/all">
+            <router-link v-bind:to="'/all'">
                 <h4 id="explor">EXPLOR MORE<br>...</h4>
-            </a>
+            </router-link>
         </div>
     </div>
     <!--底栏-->

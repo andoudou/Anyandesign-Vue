@@ -8,11 +8,11 @@
         <div class="headlinecenter">
             <h1>OOPS!</h1>
             <h2>The page you request is still under construction</h2><br><br>
-                <a href="#/">
+                <router-link v-bind:to="'/'">
                     <div id="homebutton">
                         <h5>BACK TO HOME</h5>
                     </div>
-                </a>
+                </router-link>
         </div>
         <h6 id="photoinfo">@Samuel Zeller from unsplash.com</h6>
     </div>

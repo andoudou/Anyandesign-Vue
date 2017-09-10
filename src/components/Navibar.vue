@@ -1,38 +1,38 @@
 <template>
     <div id="navibar" v-bind:class="{scrolled: isScrolledFinally(), dark: isDarkTheme}">
         <div id="bar">
-            <a id="home" href="#/">
+            <router-link id="home" v-bind:to="'/'">
                 <div id="logo"></div>
-            </a>
+            </router-link>
             <div id="menu">
                 <ul>
                     <div class="dropdown">
                         <li class="underline">
                             <h5 class="dropbtn">WORKS</h5>
                             <div class="dropdown-content">
-                                <a href="#/">
+                                <router-link v-bind:to="'/'">
                                     <h6 class="underline">SELECTED</h6>
-                                </a>
-                                <a href="#/all">
-                                    <h6 class="underline">ALL</h6>
-                                </a>
+                                </router-link>
+                                <router-link v-bind:to="'/all'">
+                                    <h6 class="underline">All</h6>
+                                </router-link>
                             </div>
                         </li>
                     </div>
 
                     <li class="underline">
-                        <a class="menu" href="#/about">
+                        <router-link class="menu" v-bind:to="'/about'">
                             <h5>ABOUT</h5>
-                        </a>
+                        </router-link>
                     </li>
 
                     <div class="dropdown">
                         <li class="underline">
                             <h5 class="dropbtn">DOWNLOAD</h5>
                             <div class="dropdown-content">
-                                <a href="#/oops" class="scroll_projects">
+                                <router-link class="scroll_projects" v-bind:to="'/oops'">
                                     <h6 class="underline">PORTFOLIO</h6>
-                                </a>
+                                </router-link>
                                 <a href="/static/files/anyan_resume.pdf" target="_blank">
                                     <h6 class="underline">RESUME</h6>
                                 </a>
