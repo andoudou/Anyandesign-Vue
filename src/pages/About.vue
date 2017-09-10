@@ -1,6 +1,6 @@
 <template>
   <div id="about">
-    <cover v-bind:scrollTo="'#pageContent'" v-bind:backgroundClass="'about'">
+    <cover v-bind:scrollTo="'#goingto'" v-bind:backgroundClass="'about'">
         <div slot="headlineContent">
           <h5 class="baudelaire">
             <span id="quote">L’étude du beau est un duel où <br>l’artiste crie de frayeur avant d’être vaincu.</span><br>对美的研究不过一场殊死决斗，<br>在注定被击败的结局之前，只不过看谁的哀鸣声更为响彻。”<br>- Charles Pierre Baudelaire 波德莱尔 -
