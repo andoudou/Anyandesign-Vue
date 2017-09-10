@@ -53,19 +53,19 @@
                             v-on:leave="listLeave"
                             v-on:after-leave="afterListLeave">
                             <li v-if="showList" key="0" v-bind:data-index="0">
-                                <a v-on:click="navigateTo('/')">HOME</a>
+                                <a v-on:click="navigateTo('/', 0)">HOME</a>
                             </li>
                             <li v-if="showList" key="1" v-bind:data-index="1">
-                                <a v-on:click="navigateTo('/all')">ALL WORKS</a>
+                                <a v-on:click="navigateTo('/all', 1)">ALL WORKS</a>
                             </li>
                             <li v-if="showList" key="2" v-bind:data-index="2">
-                                <a v-on:click="navigateTo('/about')">ABOUT</a>
+                                <a v-on:click="navigateTo('/about', 2)">ABOUT</a>
                             </li>
                             <li v-if="showList" key="3" v-bind:data-index="3">
                                 <a href="/static/files/anyan_resume.pdf">RESUME</a>
                             </li>
-                            <li v-if="showList" key="4" v-bind:data-index="4">
-                                <div id="goback" v-on:click="showList = false"></div>
+                            <li v-if="showList" key="4" v-bind:data-index="maxIndex">
+                                <div id="goback" v-on:click="navigateTo('', 4)"></div>
                             </li>
                         </transition-group>
                     </ul>
@@ -95,7 +95,9 @@ export default {
             isScrolled: window.scrollY > 0.1 * window.innerHeight,
             showPopup: false,
             showList: false,
-            navigate: ''
+            navigate: '',
+            clickedItemIndex: null,
+            maxIndex: 4
         }
     },
     methods: {
@@ -109,9 +111,10 @@ export default {
                 this.isScrolled = false
             }
         },
-        navigateTo: function(path) {
+        navigateTo: function(path, clicked) {
             this.navigate = path
             this.showList = false
+            this.clickedItemIndex = clicked
         },
         afterMenuEnter: function(el) {
             this.showList = true
@@ -121,7 +124,8 @@ export default {
             el.style.transform = this.setTransformX(el, 60)
         },
         listEnter: function(el, done) {
-            var delay = el.dataset.index * 120
+            var index = this.correctIndex(el.dataset.index)
+            var delay = index * 120
             var vm = this;
 
             setTimeout(function(){
@@ -143,7 +147,8 @@ export default {
             el.style.opacity = 1
         },
         listLeave: function(el, done) {
-            var delay = el.dataset.index * 120
+            var index = this.correctIndex(el.dataset.index)
+            var delay = index * 120
             var vm = this;
 
             setTimeout(function(){
@@ -155,13 +160,14 @@ export default {
                         done()
                     } else {
                         currentX += 6
-                        el.style.opacity = Number(el.style.opacity) - 0.20
+                        el.style.opacity = Number(el.style.opacity) - 0.25
                         vm.setTransformX(el, currentX)
                     }
                 }
             }, delay)
         },
         afterListLeave: function(el) {
+            this.clickedItemIndex = null
             if(!!this.navigate && this.$route.path !== this.navigate) {
                 this.$router.push(this.navigate)
                 this.navigate = ''
@@ -178,6 +184,17 @@ export default {
             element.style.msTransform = transfromString;
             element.style.OTransform = transfromString;
             element.style.transform = transfromString;
+        },
+        correctIndex: function(index){
+            if (this.clickedItemIndex !== null) {
+                if (Number(this.clickedItemIndex) === Number(index)) {
+                    return this.maxIndex
+                }
+                else if (this.clickedItemIndex < index) {
+                    return index - 1
+                }
+            }
+            return index
         }
     },
     created() {
