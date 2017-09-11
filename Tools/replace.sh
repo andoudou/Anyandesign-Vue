@@ -6,9 +6,7 @@ Source="/static/"
 Target="http://lightcdn.azurewebsites.net/static/"
 echo replace "$Source" with "$Target"
 
-ls dist
-
-for file in $(find ./dist -name 'build.*')
+for file in $(find ./dist/build.*)
 do
     echo Working on "$file"
 
