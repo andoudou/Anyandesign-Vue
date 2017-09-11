@@ -192,30 +192,7 @@ export default {
     letter-spacing: 1px;
 }
 
-.loveA {
-    position: relative;
-    width: 100%;
-    background: #fff;
-}
 
-.loveB {
-    position: relative;
-    width: 100%;
-    background: #F4F4F4;
-}
-
-.left {
-    /*background: palevioletred;*/
-    background-size: cover;
-    width: 40%;
-    margin-left: 10%;
-}
-
-.right {
-    /*background: mediumpurple;*/
-    background-size: cover;
-    width: 40%;
-}
 
 .lovepic {
     margin-left: auto;
@@ -246,8 +223,22 @@ export default {
     font-size: 12pt;
 }
 
+.left {
+    /*background: palevioletred;*/
+    float: left;
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+    margin-left: 10%;
+}
 
-
+.right {
+    /*background: mediumpurple;*/
+    float: left;
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+}
 
 
 /*.anyan {
@@ -476,20 +467,45 @@ export default {
 
 @media (max-device-width: 1024px) {
 
-.section {
-    height: 33.33vh;
-}
+    .section {
+        height: 33vh;
+    }
 
+    .loveA {
+        position: relative;
+        width: 100%;
+        height: 33vh;
+        background: #fff;
+    }
+
+    .loveB {
+        position: relative;
+        width: 100%;
+        height: 33vh;
+        background: #F4F4F4;
+    }
 }
 
 @media (min-device-width: 1025px) {
 
-.section {
-    height: 100vmin;
-}
+    .section {
+        height: 100vmin;
+    }
 
-}
+    .loveA {
+        position: relative;
+        width: 100%;
+        height: 100vmin;
+        background: #fff;
+    }
 
+    .loveB {
+        position: relative;
+        width: 100%;
+        height: 100vmin;
+        background: #F4F4F4;
+    }
+}
 </style>
 <style>
 #banner.about {
