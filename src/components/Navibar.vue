@@ -95,7 +95,7 @@ export default {
     },
     data() {
         return {
-            isScrolled: window.scrollY > 0.1 * window.innerHeight,
+            isScrolled: (typeof window.scrollY === "undefined" ? window.pageYOffset : window.scrollY) > 0.1 * window.innerHeight,
             showPopup: false,
             showList: false,
             navigate: '',
