@@ -157,22 +157,22 @@ a {
 
 #catalogueicon1 {
     background: url('/static/images/icon/catalogue1.svg') no-repeat 0 0;
-    background-size: cover;
+    background-size: 356px 80px;
 }
 
 #catalogueicon2 {
     background: url('/static/images/icon/catalogue1.svg') no-repeat 33.3% 0;
-    background-size: cover;
+    background-size: 356px 80px;
 }
 
 #catalogueicon3 {
     background: url('/static/images/icon/catalogue1.svg') no-repeat 66.666667% 0;
-    background-size: cover;
+    background-size: 356px 80px;
 }
 
 #catalogueicon4 {
     background: url('/static/images/icon/catalogue1.svg') no-repeat 100%;
-    background-size: cover;
+    background-size: 356px 80px;
 }
 
 .queue:hover div {
@@ -184,21 +184,21 @@ a {
 
 .queue:hover #catalogueicon1 {
     background: url('/static/images/icon/catalogue2.svg') no-repeat 0 0;
-    background-size: cover;
+    background-size: 356px 80px;
 }
 
 .queue:hover #catalogueicon2 {
     background: url('/static/images/icon/catalogue2.svg') no-repeat 33.3% 0;
-    background-size: cover;
+    background-size: 356px 80px;
 }
 
 .queue:hover #catalogueicon3 {
     background: url('/static/images/icon/catalogue2.svg') no-repeat 66.666667% 0;
-    background-size: cover;
+    background-size: 356px 80px;
 }
 
 .queue:hover #catalogueicon4 {
     background: url('/static/images/icon/catalogue2.svg') no-repeat 100%;
-    background-size: cover;
+    background-size: 356px 80px;
 }
 </style>

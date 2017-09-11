@@ -421,32 +421,32 @@ export default {
 
 #loveicon1 {
     background: url('/static/images/icon/love.svg') no-repeat 0 0;
-    background-size: cover;
+    background-size: 633px 90px;
 }
 
 #loveicon2 {
     background: url('/static/images/icon/love.svg') no-repeat 20% 0;
-    background-size: cover;
+    background-size: 633px 90px;
 }
 
 #loveicon3 {
     background: url('/static/images/icon/love.svg') no-repeat 40% 0;
-    background-size: cover;
+    background-size: 632px 90px;
 }
 
 #loveicon4 {
     background: url('/static/images/icon/love.svg') no-repeat 60% 0;
-    background-size: cover;
+    background-size: 633px 90px;
 }
 
 #loveicon5 {
     background: url('/static/images/icon/love.svg') no-repeat 80% 0;
-    background-size: cover;
+    background-size: 632px 90px;
 }
 
 #loveicon6 {
     background: url('/static/images/icon/love.svg') no-repeat 100% 0;
-    background-size: cover;
+    background-size: 633px 90px;
 }
 
 .why h5 {
