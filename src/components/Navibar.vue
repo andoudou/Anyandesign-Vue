@@ -116,7 +116,8 @@ export default {
     },
     methods: {
         handleScroll: function(event) {
-            if (window.scrollY > 0.1 * window.innerHeight) {
+            var top = typeof window.scrollY === "undefined" ? window.pageYOffset : window.scrollY
+            if (top > 0.1 * window.innerHeight) {
                 this.isScrolled = true
             } else {
                 this.isScrolled = false
