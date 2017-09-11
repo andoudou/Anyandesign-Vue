@@ -1,0 +1,366 @@
+.container:after,
+.row:after,
+.u-cf {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#photoinfoContent {
+    color: #000;
+}
+
+.container {
+    background: #fff;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 50;
+}
+
+#describ {
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    position: relative;
+    padding: calc(12 * (1vw + 1vh - 1vmin)) 0;
+    height: auto;
+}
+
+#describ h4 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.why p {
+    font-weight: 300;
+}
+
+.baudelaire {
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 100;
+    transition: all 0.5s;
+    color: #000;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 22pt;
+}
+
+#quote {
+    font-style: italic;
+    font-size: 12pt;
+}
+
+.left {
+    /*background: palevioletred;*/
+    float: left;
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+    margin-left: 10%;
+}
+
+.right {
+    /*background: mediumpurple;*/
+    float: left;
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+}
+
+
+/*.anyan {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #F4F4F4;
+}
+
+.leftyan {
+    background: palevioletred;
+    float: left;
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+    margin-left: 10%;
+}
+
+.rightyan {
+    background: mediumpurple;
+    float: left;
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+}
+
+#yan {
+    width: 90%;
+    height: 45%;
+    margin-top: 40%;
+    background: url('../images/about/yan.jpg') no-repeat center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.zhoushan {
+    width: 100%;
+    text-align: left;
+    font-weight: 300;
+    font-size: 8pt;
+    color: #888;
+    margin-top: 0.5em;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+}
+
+.quote {
+    width: 100%;
+    margin-top: 40%;
+    text-align: left;
+}
+
+.quote h3 {
+    padding-bottom: 48%;
+}*/
+
+.lovepic {
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#lovepic1 {
+    width: 100%;
+    height: 45vmin;
+    margin-top: 30vmin;
+    background: url('/static/images/about/design.jpg') no-repeat center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#lovepic3 {
+    width: 100%;
+    height: 45vmin;
+    margin-top: 30vmin;
+    background: url('/static/images/about/hiking.jpg') no-repeat center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#lovepic4 {
+    width: 100%;
+    height: 45vmin;
+    margin-top: 30vmin;
+    background: url('/static/images/about/calligraphy.jpg') no-repeat center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#lovepic5 {
+    width: 100%;
+    height: 45vmin;
+    margin-top: 30vmin;
+    background: url('/static/images/about/classical.jpg') no-repeat center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.right h6 {
+    text-align: right;
+    font-weight: 300;
+    font-size: 8pt;
+    color: #888;
+    margin-top: 0.5em;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+}
+
+.left h6 {
+    text-align: left;
+    font-weight: 300;
+    font-size: 8pt;
+    color: #888;
+    margin-top: 0.5em;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+}
+
+.why {
+    width: 80%;
+    margin-top: 40vmin;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+}
+
+.why h3 {
+    font-weight: 500;
+}
+
+.why p {
+    font-size: 10pt;
+    font-weight: 200;
+}
+
+.loveicon {
+    width: 90px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    margin-bottom: 10%;
+}
+
+#loveicon1 {
+    background: url('/static/images/icon/love.svg') no-repeat 0 0;
+    background-size: 632px 90px;
+}
+
+#loveicon2 {
+    background: url('/static/images/icon/love.svg') no-repeat 20% 0;
+    background-size: 632px 90px;
+}
+
+#loveicon3 {
+    background: url('/static/images/icon/love.svg') no-repeat 40% 0;
+    background-size: 632px 90px;
+}
+
+#loveicon4 {
+    background: url('/static/images/icon/love.svg') no-repeat 60% 0;
+    background-size: 632px 90px;
+}
+
+#loveicon5 {
+    background: url('/static/images/icon/love.svg') no-repeat 80% 0;
+    background-size: 632px 90px;
+}
+
+#loveicon6 {
+    background: url('/static/images/icon/love.svg') no-repeat 100% 0;
+    background-size: 632px 90px;
+}
+
+.why h5 {
+    margin-bottom: 10px;
+}
+
+#ground {
+    background: url('/static/images/about/yan2.jpg') no-repeat bottom;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.5s;
+}
+
+@media (max-device-width: 1024px) {
+    #lovepic2 {
+        width: 100%;
+        height: 60vmin;
+        margin-top: 20vmin;
+        background: url('/static/images/about/reading.jpg') no-repeat center;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    #lovepic6 {
+        width: 100%;
+        height: 60vmin;
+        margin-top: 20vmin;
+        background: url('/static/images/about/chocolate.jpg') no-repeat center;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    .section {
+        height: 100vmin;
+    }
+    .loveA {
+        position: relative;
+        width: 100%;
+        height: 100vmin;
+        background: #fff;
+    }
+    .loveB {
+        position: relative;
+        width: 100%;
+        height: 100vmin;
+        background: #F4F4F4;
+    }
+    .vertical {
+        width: 100%;
+    }
+}
+
+@media (min-device-width: 1025px) {
+    #lovepic2 {
+        width: 90%;
+        height: 80vmin;
+        margin-top: 10vmin;
+        background: url('/static/images/about/reading.jpg') no-repeat center;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    #lovepic6 {
+        width: 90%;
+        height: 80vmin;
+        margin-top: 10vmin;
+        background: url('/static/images/about/chocolate.jpg') no-repeat center;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    .section {
+        height: 100vmin;
+    }
+    .loveA {
+        position: relative;
+        width: 100%;
+        height: 100vmin;
+        background: #fff;
+    }
+    .loveB {
+        position: relative;
+        width: 100%;
+        height: 100vmin;
+        background: #F4F4F4;
+    }
+    .vertical {
+        width: 90%;
+    }
+}

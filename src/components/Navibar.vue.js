@@ -67,8 +67,8 @@ export default {
             var vm = this;
 
             setTimeout(function() {
-                var currentX = 60;
-                var id = setInterval(frame, 50);
+                var currentX = 80;
+                var id = setInterval(frame, 16);
 
                 function frame() {
                     if (currentX <= 0) {
@@ -93,10 +93,10 @@ export default {
 
             setTimeout(function() {
                 var currentX = 0;
-                var id = setInterval(frame, 50);
+                var id = setInterval(frame, 14);
 
                 function frame() {
-                    if (currentX >= 60) {
+                    if (currentX >= 80) {
                         clearInterval(id)
                         setTimeout(function() { done() }, delaySingle * vm.maxIndex - delay)
                     } else {

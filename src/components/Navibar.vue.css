@@ -177,8 +177,8 @@
     background-size: contain;
     position: absolute;
     right: 0;
-    width: 56px;
-    height: 56px;
+    width: 5vmin;
+    height: 5vmin;
     cursor: pointer;
 }
 
@@ -191,7 +191,7 @@
 }
 
 #navibar.scrolled #hamburger {
-    top: 22px;
+    top: 30%;
 }
 
 #popupmenu {
@@ -207,8 +207,8 @@
 #popupmenu ul {
     position: relative;
     text-align: center;
-    font-size: 32pt;
-    line-height: 5em;
+    font-size: 3vh;
+    line-height: 15vh;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -221,8 +221,8 @@
     margin-right: auto;
     right: 0;
     left: 0;
-    width: 80px;
-    height: 80px;
+    width: 6vh;
+    height: 6vh;
     background: url('/static/images/icon/goback.svg') no-repeat center;
     background-size: contain;
     cursor: pointer;
@@ -255,14 +255,14 @@
         display: inline-block;
     }
     #logo {
-        width: 60px;
-        height: 60px;
+        width: 6vmin;
+        height: 6vmin;
     }
     #navibar.scrolled #logo {
-        top: 10px;
+        top: 16%;
     }
     #navibar.scrolled {
-        height: 100px;
+        height: 12vmin;
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
     }
 }
