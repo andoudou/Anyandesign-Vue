@@ -130,14 +130,14 @@ export default {
 
             setTimeout(function(){
                 var currentX = 60;
-                var id = setInterval(frame, 75);
+                var id = setInterval(frame, 50);
                 function frame(){
                     if(currentX <= 0) {
                         clearInterval(id)
                         done()
                     } else {
-                        currentX -= 6
-                        el.style.opacity = Number(el.style.opacity) + 0.1
+                        currentX -= 3
+                        el.style.opacity = Number(el.style.opacity) + 0.05
                         vm.setTransformX(el, currentX)
                     }
                 }
@@ -147,20 +147,21 @@ export default {
             el.style.opacity = 1
         },
         listLeave: function(el, done) {
+            var delaySingle = new Number(120)
             var index = this.correctIndex(el.dataset.index)
-            var delay = index * 120
+            var delay = index * delaySingle
             var vm = this;
 
             setTimeout(function(){
                 var currentX = 0;
-                var id = setInterval(frame, 75);
+                var id = setInterval(frame, 50);
                 function frame(){
                     if(currentX >= 60) {
                         clearInterval(id)
-                        done()
+                        setTimeout(function(){done()}, delaySingle * vm.maxIndex - delay)
                     } else {
-                        currentX += 6
-                        el.style.opacity = Number(el.style.opacity) - 0.25
+                        currentX += 3
+                        el.style.opacity = Number(el.style.opacity) - 0.05
                         vm.setTransformX(el, currentX)
                     }
                 }
@@ -391,6 +392,10 @@ export default {
 
 #navibar.dark #hamburger {
     background: url('/static/images/icon/burger2.svg') no-repeat center;
+}
+
+#navibar.dark.scrolled #hamburger {
+    background: url('/static/images/icon/burger1.svg') no-repeat center;
 }
 
 #navibar.scrolled #hamburger {
