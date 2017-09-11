@@ -5,6 +5,9 @@ echo Apply CDN
 Source="/static/"
 Target="http://lightcdn.azurewebsites.net/static/"
 echo replace "$Source" with "$Target"
+
+ls dist
+
 for file in $(find ./dist -name 'build.*')
 do
     echo Working on "$file"
