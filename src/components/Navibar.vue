@@ -1,5 +1,9 @@
 <template>
-    <div id="navibar" v-bind:class="{scrolled: isScrolledFinally(), dark: isDarkTheme}">
+    <div id="navibar"
+        v-bind:class="{
+            scrolled: this.isHandleScroll === true ? this.isScrolled : this.isPageScrolled,
+            dark: isDarkTheme
+        }">
         <div id="bar">
             <router-link id="home" v-bind:to="'/'">
                 <div id="logo"></div>
@@ -43,7 +47,10 @@
             </div>
             <div id="hamburger" v-on:click="showPopup = true">
             </div>
-            <transition name="popup" v-on:after-enter="afterMenuEnter">
+            <transition name="popup"
+                v-on:before-enter="beforeMenuEnter"
+                v-on:after-enter="afterMenuEnter"
+                v-on:after-leave="afterMenuLeave">
                 <div id="popupmenu" v-if="showPopup">
                     <ul>
                         <transition-group name="list" 
@@ -97,13 +104,13 @@ export default {
             showList: false,
             navigate: '',
             clickedItemIndex: null,
-            maxIndex: 4
+            maxIndex: 4,
+            // left: 37, up: 38, right: 39, down: 40,
+            // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+            keys : {37: 1, 38: 1, 39: 1, 40: 1}
         }
     },
     methods: {
-        isScrolledFinally: function() {
-            return this.isHandleScroll === true ? this.isScrolled : this.isPageScrolled
-        },
         handleScroll: function(event) {
             if (window.scrollY > 0.1 * window.innerHeight) {
                 this.isScrolled = true
@@ -116,8 +123,14 @@ export default {
             this.showList = false
             this.clickedItemIndex = clicked
         },
+        beforeMenuEnter: function(el){
+            this.disableScroll()
+        },
         afterMenuEnter: function(el) {
             this.showList = true
+        },
+        afterMenuLeave: function(el) {
+            this.enableScroll()
         },
         beforeListEnter: function(el) {
             el.style.opacity = 0
@@ -172,6 +185,7 @@ export default {
             if(!!this.navigate && this.$route.path !== this.navigate) {
                 this.$router.push(this.navigate)
                 this.navigate = ''
+                this.enableScroll()
             } else {
                 this.showPopup = false
             }
@@ -196,6 +210,32 @@ export default {
                 }
             }
             return index
+        },
+        preventDefault: function(e) {
+            e = e || window.event;
+            if (e.preventDefault)
+                e.preventDefault();
+            e.returnValue = false;  
+        },
+        preventDefaultForScrollKeys: function(e) {
+            if (this.keys[e.keyCode]) {
+                preventDefault(e);
+                return false;
+            }
+        },
+        disableScroll: function(){
+            window.addEventListener('DOMMouseScroll', this.preventDefault, false);
+            window.onwheel = this.preventDefault; // modern standard
+            window.onmousewheel = document.onmousewheel = this.preventDefault; // older browsers, IE
+            window.ontouchmove  = this.preventDefault; // mobile
+            document.onkeydown  = this.preventDefaultForScrollKeys;
+        },
+        enableScroll: function() {
+            window.removeEventListener('DOMMouseScroll', this.preventDefault, false);
+            window.onmousewheel = document.onmousewheel = null; 
+            window.onwheel = null; 
+            window.ontouchmove = null;  
+            document.onkeydown = null; 
         }
     },
     created() {
