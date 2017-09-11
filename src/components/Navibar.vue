@@ -301,6 +301,7 @@ export default {
     margin: 10px 0;
     background: url('/static/images/icon/logo1.svg') no-repeat center;
     transition: all 0.5s;
+    background-size: 100%;
 }
 
 #logo:hover {
@@ -315,7 +316,6 @@ export default {
 
 #navibar.scrolled #logo {
     background: url('/static/images/icon/logo2.svg') no-repeat center;
-    background-size: 100%;
 }
 
 #navibar.scrolled.dark #logo {
