@@ -1,9 +1,5 @@
 <template>
-    <div id="navibar"
-        v-bind:class="{
-            scrolled: this.isHandleScroll === true ? this.isScrolled : this.isPageScrolled,
-            dark: isDarkTheme
-        }">
+    <div id="navibar" v-bind:class="bannerClassObject">
         <div id="bar">
             <router-link id="home" v-bind:to="'/'">
                 <div id="logo"></div>
@@ -108,6 +104,14 @@ export default {
             // left: 37, up: 38, right: 39, down: 40,
             // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
             keys : {37: 1, 38: 1, 39: 1, 40: 1}
+        }
+    },
+    computed: {
+        bannerClassObject: function () {
+            return {
+                scrolled: this.isHandleScroll === true ? this.isScrolled : this.isPageScrolled,
+                dark: this.isDarkTheme
+            }
         }
     },
     methods: {
