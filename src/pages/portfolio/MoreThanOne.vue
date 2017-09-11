@@ -60,7 +60,7 @@ export default {
     background: #ADD868;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vmin;
     padding-left: 10%;
     padding-right: 10%;
     margin-left: auto;

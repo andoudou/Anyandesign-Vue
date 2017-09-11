@@ -34,9 +34,9 @@
                         <li class="underline">
                             <h5 class="dropbtn">DOWNLOAD</h5>
                             <div class="dropdown-content">
-                                <router-link class="scroll_projects" v-bind:to="'/oops'">
+                                <!--<router-link class="scroll_projects" v-bind:to="'/oops'">
                                     <h6 class="underline">PORTFOLIO</h6>
-                                </router-link>
+                                </router-link>-->
                                 <a href="/static/files/anyan_resume.pdf" target="_blank">
                                     <h6 class="underline">RESUME</h6>
                                 </a>

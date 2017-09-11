@@ -72,7 +72,7 @@ export default {
 
 #phone {
     position: absolute;
-    top: 65%;
+    top: 65vmin;
     right: 0;
     width: 60%;
     height: 100%;
@@ -82,6 +82,6 @@ export default {
     background: url('/static/images/projects/foodprint/foodprint1.jpg') no-repeat top;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 100vmin;
 }
 </style>
