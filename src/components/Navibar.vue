@@ -10,20 +10,20 @@
                         <li class="underline">
                             <h5 class="dropbtn">WORKS</h5>
                             <div class="dropdown-content">
-                                <router-link v-bind:to="'/'">
+                                <a v-on:click="menuItemClicked('/')">
                                     <h6 class="underline">SELECTED</h6>
-                                </router-link>
-                                <router-link v-bind:to="'/all'">
+                                </a>
+                                <a v-on:click="menuItemClicked('/all')">
                                     <h6 class="underline">All</h6>
-                                </router-link>
+                                </a>
                             </div>
                         </li>
                     </div>
 
                     <li class="underline">
-                        <router-link class="menu" v-bind:to="'/about'">
+                        <a class="menu" v-on:click="menuItemClicked('/about')">
                             <h5>ABOUT</h5>
-                        </router-link>
+                        </a>
                     </li>
 
                     <div class="dropdown">

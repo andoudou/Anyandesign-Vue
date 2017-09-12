@@ -1,6 +1,6 @@
 <template>
     <div id="wrap">
-      <navibar v-bind:isPageScrolled="isScrolled" v-bind:isHandleScroll="false"></navibar>
+      <navibar v-bind:isPageScrolled="isScrolled" v-bind:isHandleScroll="false" v-bind:scrollTo="scrollTo"></navibar>
       <div id="bannerWrap">
             <div id="banner" v-bind:class="backgroundClass"></div>
       </div>

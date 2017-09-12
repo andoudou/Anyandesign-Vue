@@ -11,6 +11,10 @@ export default {
     isDarkTheme: {
       type: Boolean,
       default: false
+    },
+    scrollTo: {
+      type: String,
+      default: null
     }
   },
   data () {
@@ -35,6 +39,15 @@ export default {
     }
   },
   methods: {
+    menuItemClicked: function (path) {
+      if (this.$route.path === path) {
+        if (this.scrollTo) {
+          this.$scrollTo(this.scrollTo, 700)
+        }
+      } else {
+        this.$router.push(path)
+      }
+    },
     handleScroll: function (event) {
       var top = typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY
       if (top > 0.1 * window.innerHeight) {
