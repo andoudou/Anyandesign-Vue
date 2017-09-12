@@ -46,6 +46,7 @@
             <transition name="popup"
                 v-on:before-enter="beforeMenuEnter"
                 v-on:after-enter="afterMenuEnter"
+                v-on:before-leave="beforeMenuLeave"
                 v-on:after-leave="afterMenuLeave">
                 <div id="popupmenu" v-if="showPopup">
                     <ul>

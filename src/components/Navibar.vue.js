@@ -67,6 +67,9 @@ export default {
     afterMenuEnter: function (el) {
       this.showList = true
     },
+    beforeMenuLeave: function (el) {
+      this.$scrollTo(this.scrollTo, 700)
+    },
     afterMenuLeave: function (el) {
       this.enableScroll()
     },
