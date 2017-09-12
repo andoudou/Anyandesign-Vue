@@ -1,0 +1,147 @@
+#photoinfoContent {
+  opacity: 0.5;
+}
+
+.container {
+  background: #fff;
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 50;
+}
+
+#list {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10%;
+  right: 0;
+  left: 0;
+}
+
+#ca {
+  position: relative;
+  float: left;
+  width: 50%;
+  /*border: 0.5px solid #eeeeee;*/
+}
+
+#cb {
+  position: relative;
+  float: left;
+  width: 50%;
+  /*border: 0.5px solid #eeeeee;*/
+}
+
+.proa,
+.prob {
+  position: relative;
+  /*background: rgb(210, 171, 171);*/
+  width: 80%;
+  height: auto;
+  padding-bottom: 20%;
+}
+
+.prob {
+  margin-left: 20%;
+}
+
+.proa img,
+.prob img {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.proa img:hover,
+.prob img:hover {
+  opacity: 0.5;
+  transition: .5s;
+}
+
+#pro2 {
+  margin-top: 40%;
+}
+
+.intro h3 {
+  position: absolute;
+  line-height: 1;
+  padding: 25px 0;
+}
+
+.intro div {
+  width: auto;
+  height: 60px;
+}
+
+.intro h5 {
+  font-weight: 200;
+  line-height: 2;
+  color: #aaa;
+}
+
+.intro:hover h6 {
+  color: #aaa;
+  transition: .2s;
+}
+
+#ground {
+  background: url('/static/images/vase4.jpg') no-repeat bottom;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: calc(35 * (1vw + 1vh - 1vmin));
+  transition: all 0.5s;
+}
+
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (min-device-width: 1025px) {
+  #connect1 {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con1.svg') no-repeat 0 0;
+    background-size: 124px 30px;
+    transition: all .2s;
+  }
+  #connect1:hover {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con2.svg') no-repeat 0 0;
+    background-size: 124px 30px;
+  }
+  #connect2 {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con1.svg') no-repeat 50% 0;
+    background-size: 124px 30px;
+    transition: all .2s;
+  }
+  #connect2:hover {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con2.svg') no-repeat 50% 0;
+    background-size: 124px 30px;
+  }
+  #connect3 {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con1.svg') no-repeat 100% 0;
+    background-size: 124px 30px;
+    transition: all .2s;
+  }
+  #connect3:hover {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con2.svg') no-repeat 100% 0;
+    background-size: 124px 30px;
+  }
+}

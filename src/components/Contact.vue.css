@@ -1,0 +1,134 @@
+#sayhi {
+  position: absolute;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  bottom: calc(4 * (1vw + 1vh - 1vmin));
+  font-size: 14px;
+  text-align: center;
+}
+
+#connect {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+#connect li {
+  display: inline-block;
+}
+
+#rights {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  bottom: calc(1 * (1vw + 1vh - 1vmin));
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0;
+  font-weight: 100;
+}
+
+@media (max-device-width: 1024px) {
+  #connect1 {
+    width: 60px;
+    height: 60px;
+    background: url('/static/images/icon/con2.svg') no-repeat 0 0;
+    background-size: 248px 60px;
+    transition: all .2s;
+  }
+  #connect2 {
+    width: 60px;
+    height: 60px;
+    background: url('/static/images/icon/con2.svg') no-repeat 50% 0;
+    background-size: 248px 60px;
+    transition: all .2s;
+  }
+  #connect3 {
+    width: 60px;
+    height: 60px;
+    background: url('/static/images/icon/con2.svg') no-repeat 100% 0;
+    background-size: 248px 60px;
+    transition: all .2s;
+  }
+}
+
+@media (min-device-width: 1025px) {
+  #connect1 {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con1.svg') no-repeat 0 0;
+    background-size: 124px 30px;
+    transition: all .2s;
+  }
+  #connect1:hover {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con2.svg') no-repeat 0 0;
+    background-size: 124px 30px;
+  }
+  #connect2 {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con1.svg') no-repeat 50% 0;
+    background-size: 124px 30px;
+    transition: all .2s;
+  }
+  #connect2:hover {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con2.svg') no-repeat 50% 0;
+    background-size: 124px 30px;
+  }
+  #connect3 {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con1.svg') no-repeat 100% 0;
+    background-size: 124px 30px;
+    transition: all .2s;
+  }
+  #connect3:hover {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con2.svg') no-repeat 100% 0;
+    background-size: 124px 30px;
+  }
+  .tooltip {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/icon/con1.svg') no-repeat 50% 0;
+    background-size: 124px 30px;
+    transition: all .2s;
+    cursor: pointer;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    height: 140px;
+    background: url('/static/images/wechat.png') no-repeat center;
+    background-size: cover;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -70px;
+    z-index: 100;
+    opacity: 0;
+    transition: .5s;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+  }
+}

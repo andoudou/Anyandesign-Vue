@@ -1,0 +1,47 @@
+.headlineleft {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  padding-top: 35vmin;
+  padding-bottom: 20vmin;
+  text-align: left;
+  transition: all 0.5s;
+}
+
+.party {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: -10;
+}
+
+#text {
+  width: 50%;
+  height: 100%;
+}
+
+#org {
+  background: url('/static/images/projects/eco360/Microsoft.png') no-repeat left;
+  ;
+  background-size: contain;
+  width: 20em;
+  height: 1.5em;
+  margin: 0.5em 0;
+}
+
+#expo {
+  position: absolute;
+  top: 35vmin;
+  right: 0;
+  background: url('/static/images/projects/eco360/sketch.jpg') no-repeat top;
+  background-size: cover;
+  width: 45%;
+  height: 45%;
+}
+
+.content {
+  text-align: center;
+}

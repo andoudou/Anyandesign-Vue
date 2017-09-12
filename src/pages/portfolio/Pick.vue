@@ -1,7 +1,6 @@
 <template>
   <div>
     <navibar></navibar>
-      
     <div class="headlineleft">
         <div id="text">
             <h1>PICK</h1>
@@ -34,87 +33,7 @@
             <contact></contact>
         </div>
     </catalogue>
-
   </div>
 </template>
-<script>
-import Navibar from '../../components/Navibar.vue'
-import Catalogue from '../../components/Catalogue.vue'
-import Contact from '../../components/Contact.vue'
-import Top from '../../components/Top.vue'
-
-export default {
-    name: "pick",
-    components: {
-        Navibar,
-        Catalogue,
-        Contact,
-        Top
-    },
-    created () {
-        window.scrollTo(0, 0)
-    }
-}
-</script>
-<style scoped>
-
-.party {
-    position: relative;
-    width: 100%;
-    height: auto;
-    z-index: -10;
-}
-
-.headlineleft {
-    background: url('/static/images/projects/pick/pick1.jpg');
-    background-size: cover;
-    position: relative;
-    width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    right: 0;
-    left: 0;
-    padding-top: 42vmin;
-    padding-bottom: 30vmin;
-    text-align: left;
-    transition: all 0.5s;
-}
-
-#text {
-    width: 45%;
-    height: 100%;
-}
-
-#device {
-    position: absolute;
-    bottom: 0vmin;
-    right: 0;
-    background: url('/static/images/projects/pick/device.png') no-repeat top;
-    background-size: contain;
-    width: 50%;
-    height: 60%;
-}
-
-#part8,
-#part7 {
-    background: #f2f2f2;
-}
-
-.video {
-    width: 100%;
-    background: #f2f2f2;
-    text-align: center;
-}
-
-.video iframe {
-    width: 80vw;
-    height: 46vw;
-    right: 0;
-    left: 0;
-    margin: 5% auto;
-}
-
-</style>
-
+<script src="./Pick.vue.js"></script>
+<style src="./Pick.vue.css" scoped></style>

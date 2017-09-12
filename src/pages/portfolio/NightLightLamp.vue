@@ -21,57 +21,5 @@
     </catalogue>
   </div>
 </template>
-<script>
-import Navibar from '../../components/Navibar.vue'
-import Catalogue from '../../components/Catalogue.vue'
-import Contact from '../../components/Contact.vue'
-import Top from '../../components/Top.vue'
-
-export default {
-    name: "nightlightlamp",
-    components: {
-        Navibar,
-        Catalogue,
-        Contact,
-        Top
-    },
-    created () {
-        window.scrollTo(0, 0)
-    }
-}
-</script>
-<style scoped>
-.party {
-    position: relative;
-    width: 100%;
-    height: auto;
-    z-index: -10;
-}
-
-.headlineleft {
-    position: absolute;
-    width: 80%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    right: 0;
-    left: 0;
-    padding-top: 40vmin;
-    padding-bottom: 20vmin;
-    text-align: left;
-    transition: all 0.5s;
-    color: #fff;
-}
-
-#text {
-    width: 55%;
-    height: 100%;
-}
-
-#part1 {
-    background: url('/static/images/projects/nightlightlamp/nightlightlamp1.jpg') no-repeat center;
-    background-size: cover;
-    width: 100%;
-    height: 100vmin;
-}
-</style>
+<script src="./NightLightLamp.vue.js"></script>
+<style src="./NightLightLamp.vue.css" scoped></style>

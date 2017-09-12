@@ -79,4 +79,3 @@
 </template>
 <script src="./Navibar.vue.js"></script>
 <style src="./Navibar.vue.css" scoped></style>
-

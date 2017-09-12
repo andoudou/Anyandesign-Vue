@@ -1,0 +1,74 @@
+#wrap {
+  position: relative;
+  width: 100%;
+  height: 100vmin;
+}
+
+.headline {
+  position: fixed;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  top: 44vmin;
+  text-align: center;
+  transition: all 0.2s;
+  opacity: 1;
+}
+
+.headline.scrolled {
+  top: 50vmin;
+  opacity: 0;
+}
+
+#photoinfo {
+  position: absolute;
+  bottom: 5vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  text-align: right;
+  color: #888;
+  opacity: 1;
+  font-style: italic;
+  z-index: 20;
+}
+
+#photoinfo.scrolled {
+  opacity: 0;
+}
+
+#bannerWrap {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#banner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -moz-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  background-attachment: scroll;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: top;
+  z-index: -1;
+}
+
+#wrap:hover #banner {
+  -moz-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  transition: 5s;
+}

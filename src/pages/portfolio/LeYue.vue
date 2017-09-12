@@ -27,54 +27,5 @@
     </catalogue>
   </div>
 </template>
-<script>
-import Navibar from '../../components/Navibar.vue'
-import Catalogue from '../../components/Catalogue.vue'
-import Contact from '../../components/Contact.vue'
-import Top from '../../components/Top.vue'
-
-export default {
-    name: "leyue",
-    components: {
-        Navibar,
-        Catalogue,
-        Contact,
-        Top
-    },
-    created () {
-        window.scrollTo(0, 0)
-    }
-}
-</script>
-<style scoped>
-.party {
-    position: relative;
-    width: 100%;
-    height: auto;
-    z-index: -10;
-}
-
-.headlineright {
-    position: absolute;
-    right: 0;
-    text-align: left;
-    width: 45%;
-    top: 36vmin;
-    right: 10%;
-}
-
-#org {
-    background: url('/static/images/projects/leyue/philips.svg') no-repeat left;
-    background-size: contain;
-    width: 100%;
-    height: 1em;
-    margin: 0.5em 0.1em;
-}
-
-#part1 {
-    background: url('/static/images/projects/leyue/leyue1.jpg') no-repeat center;
-    background-size: cover;
-    width: 100%;
-    height: 100vmin;
-}
-</style>
+<script src="./LeYue.vue.js"></script>
+<style src="./LeYue.vue.css" scoped></style>
