@@ -12,8 +12,8 @@ export default {
   data () {
     return {
       currentChange: 0,
-      fadeInDuration: 2000,
-      fadeOutDuration: 0
+      fadeInDuration: 300,
+      fadeOutDuration: 500
     }
   },
   mounted () {
@@ -56,7 +56,7 @@ export default {
             vm.currentChange++
           }
         } else {
-          el.style.opacity = Number(el.style.opacity) + 0.1
+          el.style.opacity = Number(el.style.opacity) + 0.01
         }
       }
     },
