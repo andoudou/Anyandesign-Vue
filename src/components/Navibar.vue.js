@@ -68,7 +68,9 @@ export default {
       this.showList = true
     },
     beforeMenuLeave: function (el) {
-      this.$scrollTo(this.scrollTo, 700)
+      if (this.$route.path === this.navigate) {
+        this.$scrollTo(this.scrollTo, 700)
+      }
     },
     afterMenuLeave: function (el) {
       this.enableScroll()
@@ -125,7 +127,7 @@ export default {
     },
     afterListLeave: function (el) {
       this.clickedItemIndex = null
-      if (!!this.navigate && this.$route.path !== this.navigate) {
+      if (this.navigate && this.$route.path !== this.navigate) {
         this.$router.push(this.navigate)
         this.navigate = ''
         this.enableScroll()
