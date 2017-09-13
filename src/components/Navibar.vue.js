@@ -42,7 +42,7 @@ export default {
     menuItemClicked: function (path) {
       if (this.$route.path === path) {
         if (this.scrollTo) {
-          this.$scrollTo(this.scrollTo, 700)
+          this.$scrollTo(this.scrollTo, 700, {easing: [0.445, 0.05, 0.55, 0.95]})
         }
       } else {
         this.$router.push(path)

@@ -1,6 +1,6 @@
 <template>
     <a>
-        <div id="top" class="scroll_top" v-scroll-to="{ element: '#app', duration: 1000 }"></div>
+        <div id="top" class="scroll_top" v-on:click="goTop()"></div>
     </a>
 </template>
 <script src="./Top.vue.js"></script>
