@@ -10,7 +10,7 @@ export default {
   },
   methods: {
     handleScroll: function (event) {
-      var top = typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY
+      var top = this.$helper.getPageScrollTop()
       if (top > 0.1 * window.innerHeight) {
         this.isScrolled = true
       } else {
@@ -20,7 +20,7 @@ export default {
   },
   data () {
     return {
-      isScrolled: (typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY) > 0.1 * window.innerHeight
+      isScrolled: this.$helper.getPageScrollTop() > 0.1 * window.innerHeight
     }
   },
   created () {

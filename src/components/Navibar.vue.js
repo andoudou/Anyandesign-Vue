@@ -19,7 +19,7 @@ export default {
   },
   data () {
     return {
-      isScrolled: (typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY) > 0.1 * window.innerHeight,
+      isScrolled: this.$helper.getPageScrollTop() > 0.1 * window.innerHeight,
       showPopup: false,
       showList: false,
       navigate: '',
@@ -42,14 +42,14 @@ export default {
     menuItemClicked: function (path) {
       if (this.$route.path === path) {
         if (this.scrollTo) {
-          this.$scrollTo(this.scrollTo, 700, {easing: [0.445, 0.05, 0.55, 0.95]})
+          this.$scrollTo(this.scrollTo, 700, {easing: this.$helper.scrollDownEasing})
         }
       } else {
         this.$router.push(path)
       }
     },
     handleScroll: function (event) {
-      var top = typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY
+      var top = this.$helper.getPageScrollTop()
       if (top > 0.1 * window.innerHeight) {
         this.isScrolled = true
       } else {

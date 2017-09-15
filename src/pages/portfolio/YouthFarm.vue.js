@@ -11,7 +11,7 @@ export default {
     Contact,
     Top
   },
-  created() {
+  created () {
     window.scrollTo(0, 0)
   }
 }

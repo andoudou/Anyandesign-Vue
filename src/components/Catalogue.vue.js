@@ -1,3 +1,5 @@
+import CatalogueItem from '../components/CatalogueItem.vue'
+
 export default {
   name: 'catalogue',
   props: {
@@ -17,6 +19,9 @@ export default {
         return null
       }
     }
+  },
+  components: {
+    CatalogueItem
   },
   methods: {
     getBackgroundColorString: function () {
