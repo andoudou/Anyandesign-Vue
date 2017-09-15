@@ -27,7 +27,7 @@
 }
 
 #org {
-    background: url('/static/images/projects/youthfarm/logo.png') no-repeat left;
+    background: url('/static/images/projects/youthfarm/papercutlogo.png') no-repeat left;
     background-size: contain;
     width: 20em;
     height: 3em;
@@ -39,7 +39,7 @@
     top: 0;
     right: 0;
     margin-right: 10%;
-    background:  url('/static/images/projects/youthfarm/papercut.svg') no-repeat top;
+    background: url('/static/images/projects/youthfarm/papercut.svg') no-repeat top;
     background-size: cover;
     width: 35%;
     height: 100vmin;
