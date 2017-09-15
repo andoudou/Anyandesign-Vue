@@ -175,7 +175,7 @@
                     </router-link>
                 </div>
                 <div class="prob" id="pro12">
-                    <router-link v-bind:to="'/oops'" target="_blank">
+                    <router-link v-bind:to="'/portfolio/youthfarm'" target="_blank">
                         <img src="/static/images/projects/all/youthfarm.jpg" width="100%" />
                         <div class="intro">
                             <div>

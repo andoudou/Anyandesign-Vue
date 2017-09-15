@@ -1,0 +1,52 @@
+.party {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: -10;
+}
+
+.headlineleft {
+    background: #fff;
+    position: relative;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    padding-top: 40vmin;
+    padding-bottom: 30vmin;
+    text-align: left;
+    transition: all 0.5s;
+}
+
+#text {
+    width: 55%;
+    height: 100%;
+}
+
+#org {
+    background: url('/static/images/projects/youthfarm/logo.png') no-repeat left;
+    background-size: contain;
+    width: 20em;
+    height: 3em;
+    margin: 1em 0.1em;
+}
+
+#house {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10%;
+    background:  url('/static/images/projects/youthfarm/papercut.svg') no-repeat top;
+    background-size: cover;
+    width: 35%;
+    height: 100vmin;
+}
+
+#part8 {
+    background: #EEEEEE;
+    padding: 0;
+    margin: 0;
+}

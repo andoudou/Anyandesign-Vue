@@ -64,7 +64,7 @@
                             <li class="tablehead">OTHERS／其他</li><br>
                             <li>——</li><br>
                             <li>
-                                <router-link v-bind:to="'/oops'">Farm of Youth／知青农场</router-link>
+                                <router-link v-bind:to="'/portfolio/youthfarm'">Farm of Youth／知青农场</router-link>
                             </li>
                             <li>
                                 <router-link v-bind:to="'/oops'">Penguin Group Exhibition／企鹅展厅</router-link>
