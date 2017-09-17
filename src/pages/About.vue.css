@@ -142,7 +142,7 @@
     margin-right: auto;
     right: 0;
     left: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
 }
 
 #lovepic1 {
@@ -328,7 +328,7 @@
 
 @media (min-device-width: 1025px) {
     #lovepic2 {
-        width: 90%;
+        width: 80%;
         height: 80vmin;
         margin-top: 10vmin;
         background: url('/static/images/about/reading.jpg') no-repeat center;
@@ -337,7 +337,7 @@
         background-size: cover;
     }
     #lovepic6 {
-        width: 90%;
+        width: 80%;
         height: 80vmin;
         margin-top: 10vmin;
         background: url('/static/images/about/chocolate.jpg') no-repeat center;
@@ -361,6 +361,6 @@
         background: #F4F4F4;
     }
     .vertical {
-        width: 90%;
+        width: 80%;
     }
 }

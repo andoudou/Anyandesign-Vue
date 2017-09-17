@@ -15,7 +15,7 @@
         <span id="photoinfoContent" slot="photoinfoContent">Rijks, Amsterdam Sept. 2016</span>
     </cover>
     <div class="container page" id="pageContent">
-        <div id="describ">
+        <div class="describ">
             <h4>Focusing on User Experience, Interaction Design and Data Visualization,</h4>
             <h4>I have a passion for design and wish to share with you.</h4>
         </div>
@@ -32,32 +32,6 @@
 						</span></div>
                     </div>
                 </router-link>
-            </div>
-            <div class="three columns">
-                <div class="picture" id="picture2">
-                    <div class="text"><span>
-						</span></div>
-                </div>
-            </div>
-            <div class="six columns">
-                <router-link v-bind:to="'/portfolio/performingwall'">
-                    <div class="picture" id="picture3">
-                        <div class="text"><span>
-								<h3 class="eng_name">Performing Wall</h3>
-								<h6 class="work_class">UX/Ixd</h6>
-								<h6 class="ch_name">「动次打次」面向未来办公情景的交互设计</h6>
-						</span></div>
-                    </div>
-                </router-link>
-            </div>
-        </div>
-        <!--第二行-->
-        <div class="row" id="row2">
-            <div class="three columns">
-                <div class="picture" id="picture4">
-                    <div class="text"><span>
-						</span></div>
-                </div>
             </div>
             <div class="six columns">
                 <router-link v-bind:to="'/portfolio/lightingroom'">
@@ -82,25 +56,29 @@
                 </router-link>
             </div>
         </div>
-
-        <!--第三行-->
-        <div class="row" id="row3">
+        <!--第二行-->
+        <div class="row" id="row2">
             <div class="three columns">
-                <router-link v-bind:to="'/oops'">
-                    <div class="picture" id="picture7">
+                <router-link v-bind:to="'/portfolio/performingwall'">
+                    <div class="picture" id="picture3">
                         <div class="text"><span>
-								<h3 class="eng_name">Meet Xi'an</h3>
-								<h6 class="work_class">Bicycle</h6>
-								<h6 class="ch_name">「西遇」单车</h6>
+								<h3 class="eng_name">Performing Wall</h3>
+								<h6 class="work_class">UX/Ixd</h6>
+								<h6 class="ch_name">「动次打次」面向未来办公情景的交互设计</h6>
 						</span></div>
                     </div>
                 </router-link>
             </div>
             <div class="three columns">
-                <div class="picture" id="picture8">
-                    <div class="text"><span>
+                <router-link v-bind:to="'/portfolio/pick'">
+                    <div class="picture" id="picture7">
+                        <div class="text"><span>
+								<h3 class="eng_name">Pick</h3>
+								<h6 class="work_class">UI/Ixd</h6>
+								<h6 class="ch_name">「匹课」选课网再设计</h6>
 						</span></div>
-                </div>
+                    </div>
+                </router-link>
             </div>
             <div class="six columns">
                 <router-link v-bind:to="'/portfolio/morethanone'">
@@ -114,9 +92,10 @@
                 </router-link>
             </div>
         </div>
-        <div id="describ">
+
+        <div class="describ"  id="explor">
             <router-link v-bind:to="'/all'">
-                <h4 id="explor">EXPLOR MORE<br>...</h4>
+                <h4>EXPLOR MORE<br>...</h4>
             </router-link>
         </div>
     </div>
