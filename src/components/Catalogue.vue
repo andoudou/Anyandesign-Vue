@@ -45,7 +45,7 @@
                     <div class="queue">
                         <div class="catalogueicon" id="catalogueicon3"></div>
                         <ul>
-                            <li class="tablehead">INDUSTRIAL DESIGN／工业产品设计</li><br>
+                            <li class="tablehead">INDUSTRIAL DESIGN／工业设计</li><br>
                             <li>——</li><br>
                             <li>
                                 <catalogue-item v-bind:to="'/portfolio/morethanone'" v-bind:text="'More Than One／不拘一格'"></catalogue-item>
@@ -65,9 +65,6 @@
                             <li>——</li><br>
                             <li>
                                 <catalogue-item v-bind:to="'/portfolio/youthfarm'" v-bind:text="'Farm of Youth／知青农场'"></catalogue-item>
-                            </li>
-                            <li>
-                                <catalogue-item v-bind:to="'/oops'" v-bind:text="'Penguin Group Exhibition／企鹅展厅'"></catalogue-item>
                             </li>
                             <li>
                                 <catalogue-item v-bind:to="'/portfolio/nightlightlamp'" v-bind:text="'Nightlight Lamp／夜光灯'"></catalogue-item>

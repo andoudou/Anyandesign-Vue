@@ -38,13 +38,13 @@
 .prob {
   position: relative;
   /*background: rgb(210, 171, 171);*/
-  width: 80%;
+  width: 90%;
   height: auto;
   padding-bottom: 20%;
 }
 
 .prob {
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
 .proa img,
@@ -59,7 +59,7 @@
 }
 
 #pro2 {
-  margin-top: 40%;
+  margin-top: 35%;
 }
 
 .intro h3 {

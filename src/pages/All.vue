@@ -28,7 +28,7 @@
                 </div>
                 <div class="proa" id="pro3">
                     <router-link v-bind:to="'/portfolio/foodprint'" target="_blank">
-                        <img src="/static/images/projects/all/foodprint.jpg" width="100%" />
+                        <img src="/static/images/projects/all/foodprint.jpg" width="80%" />
                         <div class="intro">
                             <div>
                                 <h3>FOODPRINT／碳从口出</h3>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="proa" id="pro7">
                     <router-link v-bind:to="'/portfolio/eco360'" target="_blank">
-                        <img src="/static/images/projects/all/eco360.jpg" width="100%" />
+                        <img src="/static/images/projects/all/eco360.jpg" width="80%" />
                         <div class="intro">
                             <div>
                                 <h3>ECO360 CJM／ECO360用户旅程图</h3>
@@ -69,14 +69,14 @@
                             <div>
                                 <h3>MORE THAN ONE／不拘一格</h3>
                             </div>
-                            <h6></h6>
+                            <h6>宿舍家具作为学生住宿环境中最重要的构成部分，要能够合理的规划利用空间，满足功能性需求， 还要成为便于室友之间交流的载体，同时还要能够创造出属于每一个人的私属空间。</h6>
                             <h5 class="time">Industrial Design/ User Research 04. 2014</h5>
                         </div>
                     </router-link>
                 </div>
                 <div class="proa" id="pro11">
                     <router-link v-bind:to="'/oops'" target="_blank">
-                        <img src="/static/images/projects/all/meetxi'an.jpg" width="100%" />
+                        <img src="/static/images/projects/all/meetxi'an.jpg" width="80%" />
                         <div class="intro">
                             <div>
                                 <h3>MEET XI'AN／西遇</h3>
@@ -87,18 +87,6 @@
                     </router-link>
                 </div>
                 <div class="proa" id="pro13">
-                    <router-link v-bind:to="'/oops'" target="_blank">
-                        <img src="/static/images/projects/all/penguinbooks.jpg" width="100%" />
-                        <div class="intro">
-                            <div>
-                                <h3>PENGUIN GROUP EXHIBITION／企鹅展厅</h3>
-                            </div>
-                            <h6></h6>
-                            <h5 class="time">Exhibition Design 04. 2014</h5>
-                        </div>
-                    </router-link>
-                </div>
-                <div class="proa" id="pro15">
                     <router-link v-bind:to="'/oops'" target="_blank">
                         <img src="/static/images/projects/all/copperplate.jpg" width="100%" />
                         <div class="intro">
@@ -163,6 +151,18 @@
                     </router-link>
                 </div>
                 <div class="prob" id="pro10">
+                    <router-link v-bind:to="'/portfolio/youthfarm'" target="_blank">
+                        <img src="/static/images/projects/all/youthfarm.jpg" width="100%" />
+                        <div class="intro">
+                            <div>
+                                <h3>FARM OF YOUTH／知青农场</h3>
+                            </div>
+                            <h6>Educated Youth Farm is base on the farming memory of Shanghai educated youth in Dafeng. Educated youth farm advocate a simple lifestyle and pass youth positive spirit by natural simple products and raw materials.</h6>
+                            <h5 class="time">Packaging/ Branding 07. 2014</h5>
+                        </div>
+                    </router-link>
+                </div>
+                <div class="prob" id="pro12">
                     <router-link v-bind:to="'/oops'" target="_blank">
                         <img src="/static/images/projects/all/beiren.jpg" width="100%" />
                         <div class="intro">
@@ -171,18 +171,6 @@
                             </div>
                             <h6></h6>
                             <h5 class="time">Industrial Design 05. 2014</h5>
-                        </div>
-                    </router-link>
-                </div>
-                <div class="prob" id="pro12">
-                    <router-link v-bind:to="'/portfolio/youthfarm'" target="_blank">
-                        <img src="/static/images/projects/all/youthfarm.jpg" width="100%" />
-                        <div class="intro">
-                            <div>
-                                <h3>FARM OF YOUTH／知青农场</h3>
-                            </div>
-                            <h6></h6>
-                            <h5 class="time">Packaging/ Branding 07. 2014</h5>
                         </div>
                     </router-link>
                 </div>
