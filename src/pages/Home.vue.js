@@ -20,7 +20,7 @@ export default {
     this.currentChange = 1
   },
   created () {
-    window.scrollTo(0, 0)
+    this.$helper.initializePage()
   },
   computed: {
     changedMessage: function () {

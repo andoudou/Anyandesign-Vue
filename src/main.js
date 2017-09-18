@@ -19,12 +19,14 @@ const helpers = {
     return top / 4 > 1000 ? top / 4 : 1000
   },
   scrollTopEasing: [0.785, 0.135, 0.15, 0.86],
-  scrollDownEasing: [0.445, 0.05, 0.55, 0.95]
+  scrollDownEasing: [0.445, 0.05, 0.55, 0.95],
+  initializePage: function () {
+    window.scrollTo(0, 0)
+  }
 }
 
 var helperPlugin = {
   install: function (Vue, options) {
-    console.log('install')
     Vue.prototype.$helper = helpers
   }
 }

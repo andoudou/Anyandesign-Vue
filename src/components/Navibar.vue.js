@@ -27,7 +27,8 @@ export default {
       maxIndex: 4,
       // left: 37, up: 38, right: 39, down: 40,
       // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-      keys: { 37: 1, 38: 1, 39: 1, 40: 1 }
+      keys: { 37: 1, 38: 1, 39: 1, 40: 1 },
+      scrollDisabled: false
     }
   },
   computed: {
@@ -169,18 +170,26 @@ export default {
       }
     },
     disableScroll: function () {
+      if (this.scrollDisabled) {
+        return
+      }
       window.addEventListener('DOMMouseScroll', this.preventDefault, false)
       window.onwheel = this.preventDefault // modern standard
       window.onmousewheel = document.onmousewheel = this.preventDefault // older browsers, IE
       window.ontouchmove = this.preventDefault // mobile
       document.onkeydown = this.preventDefaultForScrollKeys
+      this.scrollDisabled = true
     },
     enableScroll: function () {
+      if (!this.scrollDisabled) {
+        return
+      }
       window.removeEventListener('DOMMouseScroll', this.preventDefault, false)
       window.onmousewheel = document.onmousewheel = null
       window.onwheel = null
       window.ontouchmove = null
       document.onkeydown = null
+      this.scrollDisabled = false
     }
   },
   created () {
@@ -192,5 +201,6 @@ export default {
     if (this.isHandleScroll === true) {
       window.removeEventListener('scroll', this.handleScroll)
     }
+    this.enableScroll()
   }
 }
