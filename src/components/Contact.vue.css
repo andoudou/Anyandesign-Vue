@@ -10,6 +10,15 @@
   text-align: center;
 }
 
+/* cache con images */
+.sayhi:before {
+  content: url('/static/images/icon/con2.svg');
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
 #connect {
   width: 80%;
   margin-left: auto;

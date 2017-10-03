@@ -4,6 +4,14 @@
     position: relative;
 }
 
+/* cache catalogue images */
+.cataloguebox:before {
+    content: url('/static/images/icon/catalogue2.svg');
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    position: absolute;
+}
 
 /* catalogou */
 
